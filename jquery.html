@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // var num1 = 1;
+        // var char1 = "1";
+        // var myName = "TAMO";
+
+        // alert(num1 + char1);
+
+        // if(num1 == 1) {
+        //     document.write("num1은" + num1 + "입니다");
+        // }
+
+        // for(var i=1; i <=5; i++) {
+        //     document.write(i + "<br>");
+        // }
+
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                alert("클릭되었음.");
+            });
+        });
+
+    </script>
+    <style>
+        .btn {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            background: deeppink;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">버튼</div>
+    
+    
+</body>
+</html>
