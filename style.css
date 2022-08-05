@@ -7,7 +7,17 @@
     color: black;
 }
 
-.intro-bg{
+h1 {
+    font-size: 48px;
+    font-weight: 100;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.intro_bg{
     background-image: url("./images/flash-4244923_1920.png");
     width: 100%;
     height: 718px;
@@ -58,12 +68,15 @@
     display: flex;
     width: calc(1280px - 300px);
     justify-content: flex-end;
-    margin-top: 26px;
+    line-height: 86px;
 }
 
 .nav > li{
     color: white;
     margin-left: 84px;
+}
+.nav > li > a {
+    color: white;
 }
 
 
@@ -88,7 +101,8 @@
     display: flex;
     margin: auto;
     width: 1280px;
-    background: beige;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -97,28 +111,22 @@
     flex: 1;
     height: 132px;
 }
-.about-list > li > div{
-   text-align: center;
-    margin-top: 37px;
-    border-right: 1px solid gray;
-}
-
-.about-list > li > div:not(:last-child) {
-    border-right: 1px solid gray;
-}
- 
-
-.about-position {
-    height: 601px;
-    width: 1920px;
-    background-color: #F1F2F3;
-    position: relative;
-
-    top: -132px;
-}
-
-
-.testTag{
+.about-list > li > div {
     text-align: center;
+    margin-top: 37px;
+    height: 57px;
 
+}
+
+.about-list > li:not(:last-child) > div  {
+    border-right: 1px solid gray;
+}
+
+.content1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.content2 {
+    font-size: 24px;
 }
