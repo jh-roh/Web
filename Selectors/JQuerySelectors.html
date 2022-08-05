@@ -41,7 +41,13 @@
                 //포함 요소
                 //jQuery('li:contains("jQuery")').css("color", "red");
                 //[11] 짝/홀수(:even, :odd)
-                
+                // $('ul li:even').css("color", "blue");
+                //[12] 첫번째 자식요소
+                //alert($('ul li:last-child').html());
+                //[13] ~로 시작, 끝, 포함하는
+                jQuery('input[value^="닷넷"]').css("color", "blue");
+                jQuery('input[value$=".png"]').css("color", "red");
+                jQuery('input[value*="코리아"]').css("background-color", "yellow");
 
             }
         );
@@ -61,7 +67,8 @@
         <li>knockoutJS</li>
     </ul>
     <hr/>
-    <input type="text" name="txtInput" value="텍스트박스" />
+    <input type="text" name="txtInput" value="닷넷코리아" />
+    <input type="text" name="txtImage" value="Image.png" />
     <select>
         <option value="0">javascript</option>
         <option value="1">jQuery</option>
