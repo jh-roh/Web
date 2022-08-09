@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 텍스트 검색</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        .redColor { color: red;}
+        .blueColor {background-color: blue;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                //[1] td 태그내의 텍스트가 RedPlus를 포함하는 요소를 검색 후 배경색을 Red로 검색
+                $('td:contains("RedPlus")').addClass('redColor');
+            }
+        );
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>RedPlus</td>
+        </tr>
+        <tr>
+            <td>DotnetKorea</td>
+        </tr>
+        <tr>
+            <td>RedPlus.Net</td>
+        </tr>
+        <tr>
+            <td>Hawaso</td>
+        </tr>
+    </table>
+</body>
+</html>

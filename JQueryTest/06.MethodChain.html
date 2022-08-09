@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메서드 체인</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        .redColor { color: red;}
+        .blueColor { color: blue;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {  
+                $('td:contains("RedPlus")') //td 중 "RedPlus" 포함하는 셀 찾음
+                .siblings()                 //형제 요소들에게
+                .addClass("redColor")       //전경색을 Red로 변경
+                .parent()                   //부모로 이동
+                .find('td:eq(0)')           //0번째 셀을 찾아서
+                .addClass('blueColor');     //RedPlus를 Blue로 
+            }   
+        );
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>NickName</td><td>이름</td><td>비고</td>
+        </tr>
+        <tr>
+            <td>RedPlus</td><td>레드플러스</td><td>닷넷</td>
+        </tr>
+        <tr>
+            <td>Hawaso</td><td>하와소</td><td>강의</td>
+        </tr>
+    </table>
+</body>
+</html>

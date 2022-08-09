@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블의 짝수번째 배경색 변경</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+
+    </script>
+    <style type="text/css">
+        .redColor { background-color: red;}
+        .blueColor {background-color: blue;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                //[1] 홀수번째 배경색으로 red로 하고싶다.
+                $('tr:odd').addClass('redColor');
+                $('tr:even').addClass('blueColor');
+            }
+        );
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Window Server(0번째: 짝수)</td>
+        </tr>
+        <tr>
+            <td>Sql Server</td>
+        </tr>
+        <tr>
+            <td>Visual Studio</td>
+        </tr>
+        <tr>
+            <td>DotneNuke Portal</td>
+        </tr>
+    </table>
+</body>
+</html>
