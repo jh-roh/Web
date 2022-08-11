@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모든 폼 요소 읽어오기</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                //input만 가져오는게 아닌 모든 폼 요소를 검색
+                //input, textarea, select/option, form
+                //alert($(':input').length);
+
+                var result = "";
+                //폼 요소가 있는 만큼 반복하자
+                $(':input').each(function(index) {
+                    result += "태그명" + $(this).get(0).tagName // this.tagName
+                        + ", type 속성명" + $(this).attr('type') + '\n';
+
+                });
+                alert(result);
+
+
+            }
+        );
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Input Button" /> <br/>
+    <input type="text"  /> <br/>
+    <input type="password"  /> <br/>
+    <input type="checkbox"  /> <br/>
+    <input type="file"  /> <br/>
+    <input type="hidden"  /> <br/>
+    <input type="image"/> <br/>
+    <input type="radio"/> <br/>
+    <input type="reset"/> <br/>
+    <input type="submit"/> <br/>
+    <select><option>드롭다운리스트</option></select> <br/>
+    <textarea>멀티라인텍스트박스</textarea>
+    <button>버튼</button>
+</body>
+</html>

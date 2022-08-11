@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 늘리기 및 줄이기</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                $('div.button').click(function() {
+                    //본문 영역을 변수에 담기
+                    var $region = $('div.region');
+                    
+                    //GET : 본문 영역의 폰트 사이즈 가져오기
+                    var currentSize= $region.css('fontSize'); 
+
+                    // px 문자열을 제외한 16만 가져오기
+                    var num = parseFloat(currentSize, 10); //16
+
+                    //px : 단위를 가져오기
+                    //16px
+                    var unit = currentSize.slice(-2); //오른쪽에서 2자 가져옴
+
+                    //늘리기/줄이기
+                    if(this.id == 'goBic') {
+                        num *= 1.5;
+                    }
+                    else if(this.id == 'goSmall') {
+                        num /= 1.5;
+                    }
+
+                    //SET : 새롭게 설정된 픽셀값을 레이어 재 설정
+                    $region.css('fontSize', num + unit); // ?? + px
+
+                });
+            }
+        );
+    </script>
+</head>
+<body>
+    <div id="btn">
+        <div class="button" id="goBic">늘리기</div>
+        <div class="button" id="goSmall">줄이기</div>
+    </div>
+    <div class="region">
+        안녕하세요. 여기는 본문입니다.
+    </div>
+</body>
+</html>
