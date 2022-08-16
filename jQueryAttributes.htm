@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Attributes 접근</title>
+    <script src="js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                // $('div.myLayer2, div.myLayer3').attr('title',"attr()로 타이틀 주기");
+                $('.myLayer2, .myLayer3').each(function(index) {
+                    //this.title = "동적으로 타이틀 부여하기"; //this.속성에 의해서 특정 속성값 변경
+                    $(this).attr('title', "attr()로 타이틀 주기");
+                }); 
+
+                //myLayer3에 여러가지 속성을 부여하기
+                //$('div.myLayer3').attr('title', '3번째 레이어');
+
+                // $('div.myLayer3').attr({
+                //     title : 'JSON을 사용한 레이어',
+                //     style : 'border: 1px solid blue; background-color:yellow;'
+                // });
+
+                $('div.myLayer3')
+                    .attr({ title : 'JSON을 사용한 레이어'})
+                    .css('border', '1px solid blue')
+                    .css('background-color', 'yellow');
+            }
+        );
+
+    </script>
+</head>
+<body>
+    <div class="myLayer1" title="여기는 Red 영역입니다.">Red 영역</div>
+    <div class="myLayer2">Green 영역</div>
+    <div class="myLayer3">Blue 영역</div>
+</body>
+</html>

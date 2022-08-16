@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운리스트 선택한 값 가져오기</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+                //콤보박스가 변경될 때 발생
+                $('#1stFavorites').change(function() {
+                    // 드롭다운리스트에서 선택된 값을 텍스트 박스에 출력
+                    // var selectedText = $('#1stFavorites option:selected').text();
+                    var selectedText = $('option:selected').text();
+                    $('#txtFavorite').val(selectedText);
+
+
+                });
+            }
+        );
+
+    </script>
+</head>
+<body>
+    <select id="1stFavorites">
+        <option>C#</option>
+        <option>ASP.NET</option>
+        <option>Silverlight</option>
+    </select>
+    <input type="text" id="txtFavorite" />
+</body>
+</html>
