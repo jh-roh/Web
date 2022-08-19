@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비동기적으로 JSON 파일 로드</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+        .Yellow {
+            background-color: yellow;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.btnLoad').click(function() {
+
+            //     $.ajax({
+            //         url:"02.jQuery.getJSON.js", 
+            //         async:true,
+            //         success:function(data) {
+            //             alert(data);
+            //             $('#pnlDisplay').empty(); //패널(div)의 내용 초기화
+            //             var table = "<table border='1'><tr><td>인덱스</td><td>번호</td><td>이름</td></tr>";
+            //             //data를 탐색 : each() 메서드를 사용해서 데이터가 있는만큼 반복
+
+            //             $.each(data, function(index, entry) {
+            //                 table += '<tr>';
+            //                 table += '<td>' + index + '</td>';
+            //                 table += '<td>' + entry["Num"] + '</td>';
+
+            //                 if(entry["Name"]) { //특정 필드를 비교할 때 이러한 표현법 사용
+            //                     table += '<td>' + entry["Name"] + '</td>';
+                                
+            //                 }
+            //                 table += '</tr>';
+            //             });
+
+            //             table += "</table>";
+
+            //             $('#pnlDisplay').append(table); // 패널에 추가하기
+            //         },
+
+            //         error: function(request, status, error){
+            //             alert('bad');
+            //             alert(error);
+            //         },
+            //         dataType : 'json'
+            //     });
+            // });
+
+                $.getJSON("02.jQuery.getJSON.js" ,function(data) {
+                    console.log(data);
+                    $('#pnlDisplay').empty(); //패널(div)의 내용 초기화
+                    var table = "<table border='1'><tr><td>인덱스</td><td>번호</td><td>이름</td></tr>";
+                    //data를 탐색 : each() 메서드를 사용해서 데이터가 있는만큼 반복
+                    $.each(data, function(index, entry) {
+                        table += '<tr>';
+                        table += '<td>' + index + '</td>';
+                        table += '<td>' + entry["Num"] + '</td>';
+
+                        if(entry["Name"]) { //특정 필드를 비교할 때 이러한 표현법 사용
+                            table += '<td>' + entry["Name"] + '</td>';
+                            
+                        }
+                        table += '</tr>';
+                    });
+
+                    table += "</table>";
+                    $('#pnlDisplay').append(table); // 패널에 추가하기
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="btn" >
+        <div class="btnLoad">HTML 읽어오기</div>
+    </div>
+    <div id="pnlDisplay">
+
+    </div>
+</body>
+</html> 
