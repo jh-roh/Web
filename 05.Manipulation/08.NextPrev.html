@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 다음, 이전으로 이동</title>
+    <script src="../js/jquery-3.6.0.js" type="text/javascript">
+    </script>
+    <style type="text/css">
+      
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //next() : 다음 요소, 노드를 반환
+            $('.third-item').next().css("background-color", "red");
+            //prev() : 이전 요소, 노드를 반환
+            $('li.third-item').prev().css("background-color", "yellow");
+            
+            //같은 항목중 하나의 요소를 선택
+            $('li').next('.selected').css("background-color", "green");
+        
+            var $curr = $('#start');
+            //버튼 클릭 시 이전 항목으로 이동
+            $('#btnPrev').click(function() {
+                $curr = $curr.prev(); //이전으로 이동
+                $curr.css("background-color", "blue");
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li class="third-item">list item 3</li>
+        <li>list item 4</li>
+        <li class="selected" id="start">list item 5</li>
+    </ul>
+    <input type="button" name="btnPrev" value="이전으로" id="btnPrev" />
+</body>
+</html>
