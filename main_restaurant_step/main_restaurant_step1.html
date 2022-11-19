@@ -17,36 +17,128 @@
                 a:active => 링크를 마우스로 클릭한 순간
             */
             a:hover, a:active { text-decoration: none;}
+
+            .hidden{
+                display: block; height: 0px; width: 0px; font-size: 0; line-height: 0; 
+                margin: 0; padding: 0; border:0; overflow: hidden;
+                text-indent: -9999px;
+            }
+
+            body{
+                font-family: 'Malgun Gothic', 'Dotum', 'AppleGothic', 'Sans-serif';
+                font-size: 14px;
+                color: #666;
+                line-height: 1.5;
+            }
+
             /* Layout */
             /* 반응형(max, min) 고정형(width) */
-            #wrap { background-color: skyblue; min-width: 1000px; margin: 0 auto; }
-            #gray-box { background-color: gray; width: 100%; height: 50px; position: fixed; z-index: 1; }
-            #header { border-top: 53px solid; height: 350px; position: relative;}
+            #wrap { background-color: #4bc6ba; min-width: 1000px; margin: 0 auto; }
+            #nav-box { background-color: #242A30; width: 100%; height: 50px; position: fixed; z-index: 1; }
+            #header { border-top: 58px solid #7747FF; height: 300px; position: relative;}
             
-            #header .logo { position: absolute; top: 0px; left: 50%; margin-left: -65px; margin-top: 10px; height: 1500px;}
+            #header .logo { position: absolute; top: 0px; left: 50%; margin-left: -65px; margin-top: 40px; height: 1500px;}
 
             /* GNB */
             /* #sbGnb { } */
-            #sbGnb .category-menu { max-width: 1000px; margin: 0 auto; }
+            #sbGnb .category-menu { max-width: 1000px; margin: 0 auto; padding: 0px 0 0; }
 
             /* 수평정렬 display: inline; float : left */
-            #sbGnb .category-menu > li { float: left; width: 25%; text-align: center; margin-top: 100px; }
+            #sbGnb .category-menu > li { float: left; width: 20%; text-align: center; margin-top: 100px; box-sizing: border-box;}
+            #sbGnb .category-menu > li:nth-child(3){ margin-left: 20%; }
+            #sbGnb .category-menu > li > a 
+            {   
+                display: block; 
+                box-sizing: border-box;
+                font-size: 16px;
+                color: white;
+                line-height: 1em;
+                text-transform: uppercase;
+                padding: 0 0 38px;
+            }
 
+            /* GNB - SubMenu */   
+            #sbGnb .category-menu > li > ul {
+                display: block;
+                padding: 25px 0;
+            }
+            #sbGnb .category-menu > li > ul > li > a {
+                font-size: 16px;
+                color: #fff;
+                line-height: 30px;
+                text-decoration: none;
+                
+            }
+
+            /*navigation bar*/
+            #nav-box .nav {
+                float: right;
+            }
 
 
         </style>
     </head>
 <body>
 <div id="wrap" >
-    <div id="gray-box"></div>
+    <div id="nav-box">
+        <div class="search">
+        </div>
+
+        <div class="sub-menu">
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">MyPage</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">CS Center</a></li>
+                <li><a href="#">1:1 Q&A BBS</a></li>
+                <li><a href="#">Sign in or Register</a></li>
+            </ul>
+        </div>
+        <!-- //Navigation-->
+    </div>
     <div id="header">
         <h1 class="logo"><a href="#"><img src="../images/logo.jpg" width="130" height="130" alt="Company logo"/></a></h1>
         <div id="sbGnb">
             <ul class="category-menu">
-                <li><a href="#"><span>Starbox No.1</span></a></li>
-                <li><a href="#"><span>Food Menu</span></a></li>
-                <li><a href="#"><span>Franchise</span></a></li>
-                <li><a href="#"><span>Recruit</span></a></li>
+                <li>
+                    <a href="#"><span>Starbox No.1</span></a>
+                    <button class="hidden"><span>서브메뉴</span></button>
+                    <ul>
+                        <li><a href="#">subMenu1</a></li>
+                        <li><a href="#">subMenu2</a></li>
+                        <li><a href="#">subMenu3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Food Menu</span></a>
+                    <button class="hidden"><span>서브메뉴</span></button>
+                    <ul>
+                        <li><a href="#">subMenu1</a></li>
+                        <li><a href="#">subMenu2</a></li>
+                        <li><a href="#">subMenu3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Franchise</span></a>
+                    <button class="hidden"><span>서브메뉴</span></button>
+                    <ul>
+                        <li><a href="#">subMenu1</a></li>
+                        <li><a href="#">subMenu2</a></li>
+                        <li><a href="#">subMenu3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span>Recruit</span></a>
+                    <button class="hidden"><span>서브메뉴</span></button>
+                    <ul>
+                        <li><a href="#">subMenu1</a></li>
+                        <li><a href="#">subMenu2</a></li>
+                        <li><a href="#">subMenu3</a></li>
+                    </ul>
+                </li>
             </ul>
         </div><!-- GNB : Global Navigation Bar-->
     </div> <!-- header -->
