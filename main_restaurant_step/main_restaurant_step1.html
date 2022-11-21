@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Starbox Family Restaurant</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <style type="text/css">
             @charset "UTF-8";
             
@@ -37,7 +38,7 @@
             #nav-box { background-color: #242A30; width: 100%; height: 50px; position: fixed; z-index: 1; }
             #header { border-top: 58px solid #7747FF; height: 300px; position: relative;}
             
-            #header .logo { position: absolute; top: 0px; left: 50%; margin-left: -65px; margin-top: 40px; height: 1500px;}
+            #header .logo { position: absolute; top: 0px; left: 50%; margin-left: -65px; margin-top: 40px; height: 250px;}
 
             /* GNB */
             /* #sbGnb { } */
@@ -59,7 +60,7 @@
 
             /* GNB - SubMenu */   
             #sbGnb .category-menu > li > ul {
-                display: block;
+                display: none;
                 padding: 25px 0;
             }
             #sbGnb .category-menu > li > ul > li > a {
@@ -72,16 +73,115 @@
 
             /*navigation bar*/
             #nav-box .nav {
+                padding-top: 10px;
                 float: right;
+                /* border: 10px solid red; */
             }
 
+            #nav-box .nav li {
+                display: inline;
+                padding: 0 10px;
+            }
+
+            #nav-box .nav li a {
+                color: #999;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.025em;
+            }
+
+            #nav-box .nav li a:hover {
+                color: #fff;
+            }
+            #nav-box .nav li i {
+                color: #ddd;
+                font-size: 14px;
+            }
+
+            #nav-box .search {
+                padding: 10px 20px;
+                color: #fff;
+                font-size: 18px;
+                float: left;
+
+            }
+
+            #nav-box .search .keyword {
+                background-color: #000;
+                border: 0;
+                margin: 4px;
+                padding: 4px;
+                color: #fff;
+                
+            }
+
+            #footer {background-color: #242A30; color: #fff; padding: 40px 0px; font-size:14px; line-height: 1em;
+                    position: fixed; left: 0%; bottom: 0%; width: 100%;}
+
+
+            #footer .inner {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            #footer .inner .foot_btn {
+                margin-bottom: 20px;
+                text-align: right;
+                position: relative;
+            }
+
+            #footer .inner .foot_btn a {
+                display: inline-block;
+                border-left: 1px solid #fff;
+                color: #fff;
+                text-decoration: none;
+                padding: 0 20px;
+            }
+
+            #footer .inner .foot_btn a:first-child {
+                border-left: none;
+            }
+
+            #footer .inner .foot_btn a.contactUs {
+                position:absolute;
+                left: 0;
+                margin: 0;
+                padding-left: 0;
+                border: none;
+            }
+
+            #footer .tel {float: left;}
+            #footer .copy {float:right}
 
         </style>
+
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+        <script>
+            /* *********************** load *************************** */
+            $(document).ready(function() {
+                //반응형 처리
+                responsiveHover();
+            });
+
+            /* *********************** Responsive ********************** */
+            function responsiveHover() {
+                $("#header").hover(function() {
+                    //Show
+                    $("#sbGnb .category-menu > li > ul").slideDown(0.5 * 500);
+
+                }, function() {
+                    $("#sbGnb .category-menu > li > ul").slideUp(0.5 * 500);
+                });
+            }
+        </script>
     </head>
 <body>
 <div id="wrap" >
-    <div id="nav-box">
+    <div id="nav-box" style="min-width: 1000px;">
         <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="text" name="search-keyword" placeholder="search" class="keyword" >
         </div>
 
         <div class="sub-menu">
@@ -90,11 +190,11 @@
         <!-- Navigation -->
         <div class="nav">
             <ul>
-                <li><a href="#">MyPage</a></li>
-                <li><a href="#">Community</a></li>
+                <li><a href="#">MyPage</a> <i class="fa fa-angle-down" aria-hidden="true"></i></li>
+                <li><a href="#">Community</a> <i class="fa fa-commenting" aria-hidden="true"></i></li>
                 <li><a href="#">CS Center</a></li>
                 <li><a href="#">1:1 Q&A BBS</a></li>
-                <li><a href="#">Sign in or Register</a></li>
+                <li><i class="fa fa-user-plus" aria-hidden="true"></i> <a href="#">Sign in or Register</a></li>
             </ul>
         </div>
         <!-- //Navigation-->
@@ -147,7 +247,15 @@
     </div> <!-- contents -->
 
     <div id="footer">
-
+        <div class="inner">
+            <div class="foot_btn">
+                <a href="#">사이트 운영정책</a>
+                <a href="#">개인정보 취급방침</a>
+                <a href="mailto:admin@localhost.com" class="contactUs">관리자에게 메일보내기</a>
+            </div>
+            <p class="phone">대표전화 : 070-1234-5678</p>
+            <p class="copy">Copyright (c) 2020 VOCA Company All Right Reserved.</p>
+        </div>
     </div> <!-- footer -->
 </div> <!-- wrap -->
 </body>
