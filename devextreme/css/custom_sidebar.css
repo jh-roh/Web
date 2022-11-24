@@ -1,0 +1,429 @@
+﻿/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+body {
+    font-family: 'Nanum Gothic';
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Nanum Gothic';
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    background: #DCE6EE;
+}
+
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #164482;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    background: #DCE6EE;
+}
+
+    #sidebar.active {
+        min-width: 62px;
+        max-width: 62px;
+        text-align: center;
+    }
+
+        #sidebar.active .sidebar-header h3,
+        #sidebar.active .CTAs {
+            display: none;
+        }
+
+        #sidebar.active .sidebar-header strong {
+            display: block;
+        }
+
+    #sidebar ul li a {
+        text-align: left;
+    }
+
+    #sidebar.active ul li a text {
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 0.85em;
+        display: none;
+    }
+
+    #sidebar.active ul li a img {
+        align-content: center;
+        justify-content: center;
+    }
+
+    #sidebar.active ul li a i {
+        margin-right: 0;
+        display: block;
+        font-size: 1.8em;
+        margin-bottom: 5px;
+    }
+
+    #sidebar.active ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar.active .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: #164482;
+    }
+
+        #sidebar .sidebar-header strong {
+            display: none;
+            font-size: 1.8em;
+        }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.3em;
+        display: block;
+        background-color: #164482;
+        color: #C3DDFC;
+    }
+
+        #sidebar ul li a:hover,
+        #sidebar ul li a:active {
+            color: #081E50;
+            background: #6CADF8;
+        }
+
+        #sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+    #sidebar ul li button {
+        margin-left: 9px;
+    }
+
+        #sidebar ul li button img {
+            margin-left: -2px;
+            width: 25px;
+            height: 25px;
+        }
+
+    #sidebar.active ul li button {
+        display: none;
+    }
+
+    #sidebar ul li a img {
+        margin-left: 9px;
+        border: none;
+        outline: none;
+    }
+
+    #sidebar ul li a text {
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    #sidebar ul li.active > a,
+    a[aria-expanded="true"] {
+        color: #081E50;
+        background: #6CADF8;
+    }
+
+    #sidebar ul li > a > #mainMenu,
+    #sidebar ul li > a > #mainMenu {
+        background-image: url(../images/Icon_home.svg);
+    }
+
+    #sidebar ul li > a:hover > #mainMenu,
+    #sidebar ul li.active > a > #mainMenu {
+        background-image: url(../images/Icon_home_active.svg);
+    }
+
+    #sidebar ul li > a > #prescriptionMenu,
+    #sidebar ul li > a > #prescriptionMenu {
+        background-image: url(../images/Icon_prescription.svg);
+    }
+
+    #sidebar ul li > a:hover > #prescriptionMenu,
+    #sidebar ul li.active > a > #prescriptionMenu {
+        background-image: url(../images/Icon_prescription_active.svg);
+    }
+
+    #sidebar ul li > a > #itemHistoryMenu,
+    #sidebar ul li > a > #itemHistoryMenu {
+        background-image: url(../images/Icon_itemHistory.svg);
+    }
+
+    #sidebar ul li > a:hover > #itemHistoryMenu,
+    #sidebar ul li.active > a > #itemHistoryMenu {
+        background-image: url(../images/Icon_itemHistory_active.svg);
+    }
+
+    #sidebar ul li > a > #itemUsageMenu,
+    #sidebar ul li > a > #itemUsageMenu {
+        background-image: url(../images/Icon_itemUsage.svg);
+    }
+
+    #sidebar ul li > a:hover > #itemUsageMenu,
+    #sidebar ul li.active > a > #itemUsageMenu {
+        background-image: url(../images/Icon_itemUsage_active.svg);
+    }
+
+    #sidebar ul li > a > #itemInventoryMenu,
+    #sidebar ul li > a > #itemInventoryMenu {
+        background-image: url(../images/Icon_inventory.svg);
+    }
+
+    #sidebar ul li > a:hover > #itemInventoryMenu,
+    #sidebar ul li.active > a > #itemInventoryMenu {
+        background-image: url(../images/Icon_inventory_active.svg);
+    }
+
+
+    #sidebar ul li > a > #AuthMenu,
+    #sidebar ul li > a > #AuthMenu {
+        background-image: url(../images/Icon_login.svg);
+    }
+
+    #sidebar ul li > a:hover > #AuthMenu,
+    #sidebar ul li.active > a > #AuthMenu {
+        background-image: url(../images/Icon_login.svg);
+    }
+
+    #sidebar ul li > a > #CustomizedReportMenu{
+        background-image: url(../images/Icon_prescription.svg);
+    }
+
+    #sidebar ul li > a:hover > #CustomizedReportMenu,
+    #sidebar ul li.active > a > #CustomizedReportMenu {
+        background-image: url(../images/Icon_prescription_active.svg);
+    }
+
+    #sidebar + #content nav div #sidebarCollapseSub {
+        display: none;
+    }
+
+    #sidebar.active + #content nav div #sidebarCollapseSub {
+        display: inherit;
+    }
+
+        #sidebar.active + #content nav div #sidebarCollapseSub img {
+            width: 25px;
+            height: 25px;
+        }
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+a.download {
+    background: #fff;
+    color: #164482;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+
+
+#login-content {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        min-width: 62px;
+        max-width: 62px;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    #content {
+        width: calc(100% - 62px);
+        min-height: 100vh;
+        transition: all 0.3s;
+        background: #DCE6EE;
+    }
+
+    
+    #sidebar ul li a text {
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 0.85em;
+        display: none;
+    }
+    
+    #sidebar nav div #sidebarCollapseSub img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    #sidebar ul li button {
+        display: none;
+    }
+
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    #sidebar.active {
+        margin-left: 0 !important;
+    }
+
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs {
+        display: none;
+    }
+
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    #sidebar ul li a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul li a span {
+        font-size: 0.85em;
+    }
+
+        #sidebar ul li a i {
+            margin-right: 0;
+            display: block;
+        }
+
+    #sidebar ul ul a {
+        padding: 10px !important;
+    }
+
+    #sidebar ul li a i {
+        font-size: 1.3em;
+    }
+
+    #sidebar {
+        margin-left: 0;
+    }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+
+    #sidebar ul li button {
+        display: inherit;
+    }
+
+    #sidebar + #content nav div #sidebarCollapseSub {
+        display: inherit;
+    }
+
+    #sidebar nav div #sidebarCollapseSub {
+        display: none;
+    }
+
+    #sidebar + #content nav div #sidebarCollapseSub img {
+        width: 25px;
+        height: 25px;
+    }
+}
