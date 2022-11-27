@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>끌어올리기(Hoisting)</title>
+    <script>
+        //[!] 특정 변수 및 개체(DOM)을 먼저 선언하지 않고 호출하면 에러 발생
+        //[1] 'varNot' is undefined
+        // console.log(varNot);
+        // var varNot = "나중에 선언"; //undefined
+
+        //[2] Unable to set property 'innerHTML' of undefined or null reference
+        //document.getElementById("output").innerHTML = "안녕하세요.";
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+
+<script>
+
+    //[1]변수 선언 후 사용하면 문제없이 실행
+    var message = "안녕하세요.";
+    document.getElementById("output").innerHTML = "안녕하세요.";
+
+    //[2] 함수는 끌어올리기(Hoisting)에 의해서 뒤에 선언해도 호출 가능함
+    //[a] 함수 호출 먼저
+    console.log(add(3,5));
+
+    //[b] 함수 선언 나중
+    function add(a,b) {
+        return a + b;
+    }
+</script>
+</html>

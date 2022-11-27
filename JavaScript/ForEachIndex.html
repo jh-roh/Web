@@ -1,0 +1,26 @@
+<script>
+    //배열(컬렉션) 데이터
+    var arr = ["VisualAcademy", "DotNetKorea", "LicenseLand"];
+
+    //for문을 사용하여, 반복
+
+    for(var i = 0; i < arr.length; i++){
+        document.write(arr[i] + "<br />");
+    }
+
+    //for~in 구문을 사용하여 반복
+    for(var i in arr){ //요소값이 아닌 인덱스 값을 가져온다.
+        document.write(arr[i] + "<br />");
+    }
+
+    var obj = {Name: '홍길동', Email: "njh8810@naver.com", Address:"대구"};
+
+    document.write(obj.Name + "<br />");
+
+    // 객체의 인덱서([]) 를 사용하여 속성값 출력
+    for(var o in obj){
+        document.write(o + ": " + obj[o] + "<br />"); //Name, Email, Address
+    }
+
+
+</script>

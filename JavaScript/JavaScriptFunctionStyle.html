@@ -1,0 +1,27 @@
+<script>
+    //함수의 3가지 유형
+    function Hi() {
+        console.log("안녕하세요.");
+    }
+    //[2] Hello(msg: string) 함수 선언
+    function Hello(msg) {
+        console.log(msg);
+    }
+
+    //[3] Power(num: number) 함수 선언: 제곱근
+    function Power(num) {
+        return (num * num);
+    }
+</script>
+
+<script>
+    //[1] 매개변수도 없고 반환값도 없는 메서드 : Sub
+    Hi();
+
+    //[2] 매개변수(파라미터, 인자, 인수) 가 있는 메서드 : Sub
+    Hello("반갑습니다.");
+    Hello("또 만나요.");
+
+    //[3] 반환값이 있는 함수(메서드)
+    console.log(Power(6));
+</script>

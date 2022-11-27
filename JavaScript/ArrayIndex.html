@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    var arr1 = [10,20,30];
+
+    document.write(arr1[2] + '<br />');
+    document.write(arr1["2"] + '<br />');
+
+
+    for(var i in arr1) {
+        document.write(i + ',' +typeof i + '<br />');
+    }
+
+    //빈 배열 생성
+    var arr2 = new Array();
+    var arr3 = [];
+
+    // 배열의 인덱스는 마이너스 인덱스 및 띄어진 인덱스 사용 가능
+
+    for(var i = -10; i < 10; i++) {
+        arr2[i] = i; // -10 ~ 10 : length => 21
+    }
+
+    document.write(arr2.length + '<br />'); //0~9 : 10
+
+    // for(var i = -10; i < arr2.length; i++) {
+    //     document.write(arr2[i] + '<br />');
+    // }
+
+    console.log(arr2);
+
+    //띄어진 인덱스 사용 가능
+    arr3[3] = "333";
+    arr3[5] = "555";
+    arr3[7] = "777";
+
+    document.write(arr3.length + '<br />');
+
+
+
+</script>

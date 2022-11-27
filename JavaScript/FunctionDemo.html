@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수(무명 함수)</title>
+</head>
+<body>
+    <span id="message" ></span>
+    <script type="text/javascript">
+        function print(msg) {
+            document.getElementById("message").innerHTML += msg + '<br />';
+        }
+
+        //기본 함수
+        function square(x) {
+            var result = x * x; 
+            return result;
+        }
+
+        print(square(5));
+        //JavaScript의 함수는 추가 매개변수는 무시하는것이 특징
+        print(square(5,4));
+
+        //익명 함수(무명 함수) : anonymous function
+        var myFunc = function(x) {
+            return x * x;
+        };
+
+        print(myFunc(6));
+
+</script>
+    
+</body>
+</html>

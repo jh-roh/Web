@@ -1,0 +1,62 @@
+<script>
+
+//[!] 변수(Variable) : 프로그램에서 사용할 데이터를 저장해놓는 그릇
+
+//[1] 변수 만들기(선언)
+
+var i; // i이름으로 변수 만들기
+
+//[2] 변수에 값을 저장하기(대입, 할당)
+i = 1234;
+
+//[3] 변수에 들어있는 값 사용하기(참조)
+//document.write(i + "<br />"); // 1234
+//console.log(i);
+
+//변수(지역 변수/전역 변수)
+
+var j;
+var k;
+
+j = 2345;
+k = 3456;
+
+console.log(i + j + k);
+
+var number1, number2, number3;
+number1 = 1;
+number2 = 2;
+number3 = 3;
+
+number1 = number2 = number3 = 15;
+
+
+//document.write(number1 + number2 + number3);
+
+
+//여러개의 변수를 선언과 동시에 초기화
+
+var first = 10, seconde = 20, third = 30;
+
+console.log(first + seconde + third);
+
+
+var intNum = 100;  //정수형
+var dblsu = 12.34; //실수형
+var blnFlag = true; //불리언(Boolean)
+var objNothing = null; //널(Null) 값 : 아무것도 아닌 값(빈값(empty)과 다름)
+var strHello = "안녕하세요."; //문자열
+
+//변수의 유형(Type) 확인 : typeof 연산자
+document.write(typeof blnFlag + "<br />");
+document.write(typeof strHello + "<br />");
+
+//초기화되지 않은 변수
+var notInitialized;
+document.write(notInitialized + "<br />"); //undefined
+document.write(typeof notInitialized + "<br />"); //undefined
+
+
+
+
+</script>
