@@ -1,0 +1,29 @@
+<script>
+    function SquareFunction(x) {
+        var r = x * x;
+        return r;
+    }
+
+    var r = SquareFunction(2);
+    console.log(r);
+
+    //함수 => 객체
+
+    function myFunc(){
+        console.log("기본 함수 실행");
+    }
+    myFunc();
+
+    //축약형 함수: 함수도 하나의 object
+    var varPrintMe = function printMe() {
+        console.log("printMe 함수 실행")
+        varPrintMe.callCount += 1;
+    }; //세미콜론 붙임
+    //public static한 속성을 추가
+    varPrintMe.callCount = 1;
+    varPrintMe();
+
+    console.log(varPrintMe.callCount);
+
+
+</script>
