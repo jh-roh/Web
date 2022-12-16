@@ -1,0 +1,22 @@
+<script>
+
+    //기본 함수
+    function myFunc() {
+        console.log("기본 함수")
+    }
+    myFunc();
+
+    //축약형 함수 : 함수도 하나의 Object
+    var varPrintMe = function printMe() {
+        console.log("printMe 함수 실행");
+        varPrintMe.callCount +=  1;
+    }; //세미콜론 붙임
+
+    //Public static 한 속성을 추가
+    varPrintMe.callCount = 1;
+    varPrintMe();
+    console.log(varPrintMe.callCount);
+
+
+    
+</script>
