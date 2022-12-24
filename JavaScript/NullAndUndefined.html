@@ -1,0 +1,42 @@
+<script>
+    function print(msg) {
+        document.write(msg + "<br />");
+    }
+
+    var nullValue = null;
+
+    //[1] null
+    if(!nullValue) {
+        print("null은 조건절에서 false로 취급");
+    }
+
+    //[2] 값을 할당
+    var hasValue = "아무거나";
+
+    if(hasValue) {
+        print("값이 들어있는 변수는 true로 취급");
+    }
+
+    hasValue = 0;
+    if(!hasValue) {
+        print("변수에 할당된 값이 0이면 false로 취급");
+    }
+
+    //[3] undefined
+
+    var notValue;
+
+    if(!notValue) {
+        print("할당되지 않은 변수는 false로 취급 : " + notValue);
+    }
+
+    var obj = {name: "홍길동" };
+    print(obj.name + ", " + obj.age);
+
+
+
+
+
+
+    
+</script>

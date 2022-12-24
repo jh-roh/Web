@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var colors = ["red", "green", "blue"];
+        var colorString = colors.join(); // 기본값은 ,(콤마) 구분
+
+        document.write(colors + "<br />");
+        document.write(colorString + "<br />");
+
+        var c1 = colors.join("||");
+        document.write(c1 + "<br />");
+
+
+        var c2 = colors.join(", ");
+        document.write(c2 + "<br />");
+
+        var c3 = colors.join("그리고");
+        document.write(c3 + "<br />");
+
+
+    </script>
+</body>
+</html>

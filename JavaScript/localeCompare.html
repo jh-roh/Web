@@ -1,0 +1,19 @@
+<script>
+    var s1 = "a";
+
+    var s2 = "b";
+
+    var r;
+    r = s1.localeCompare(s2); //-1 : ASC(a,b)
+    document.write(r + "<br />");
+
+    s1 = "Hello"; s2="Hello";
+    r = s1.localeCompare(s2); //0 : Equals
+    document.write(r + "<br />");
+
+    s1 = "cd"; s2="ab";
+    r = s1.localeCompare(s2); //1 : DESC(cd, ab)
+    document.write(r + "<br />");
+
+
+</script>

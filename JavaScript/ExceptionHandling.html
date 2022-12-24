@@ -1,0 +1,29 @@
+<script>
+    //try~catch~finally 절 : 자바스크립트의 예외 처리 구문 : C#/Java 비슷
+    // try
+    // {
+    //     Fake();
+    // }
+    // catch(e)
+    // {
+    //     document.write(e.name + ", " + e.message);
+    // }
+    // finally
+    // {
+    //     document.write("<br />에러가 발생하던 안하던 실행합니다...<br/>");
+    // }
+
+    //throw {name:"예외 이름", message:"예외 내용"};
+    try
+    {
+        var a = 3;
+        var b = 0;
+        if(b === 0) {
+            throw {name: "DivideByZeroException", message :"0으로 나눌 수 없습니다."};
+        }
+    }
+    catch(e)
+    {
+        document.write(e.name + ", " + e.message);
+    }
+</script>

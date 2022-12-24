@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date().getTime()를 사용한 코드 실행시간 구하기</title>
+</head>
+<body>
+    <script>
+        //시작시간
+        var initTime = (new Date()).getTime();
+    
+        //꽤 오래 걸리는 작업 진행 : 알고리즘 실행 시간
+
+        for(var i = 0; i < 100000000; i++) {
+            i = i;
+        }
+        //종료(현재) 시간
+        var nowTime = (new Date()).getTime();
+
+
+        //실행 시간 = 현재 시간 - 시작 시간
+        var realTime = nowTime - initTime;
+
+        //출력
+        document.write("실행 시간: " + realTime + "ms");
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Object</title>
+</head>
+<body>
+    <span id="lblDate"></span>
+    <hr />
+    <span id="lblDate2"></span>
+    <hr />
+    <span id="lblDate3"></span>
+    <hr />
+    <span id="lblDate4"></span>
+    <hr />
+    <span id="lblDate5"></span>
+    <script>
+        //현재시간
+        var d = new Date();
+
+        // document.getElementById("lblDate").innerHTML = d;
+        document.getElementById("lblDate").innerHTML = d.getTime();
+        //1970년 1월 1일 0시 0분 0초부터 시간을 계산해서 밀리초단위로 표시
+
+        //특정 시간: 숫자형
+        var d2 = new Date(1671625330597);
+        
+        document.getElementById("lblDate2").innerHTML = d2;
+
+        //특정 시간: 문자열
+        var d3 = new Date("Wed Dec 21 2022 21:22:10 GMT+0900 (Korean Standard Time)");
+        
+        document.getElementById("lblDate3").innerHTML = d3.getTime();
+
+        //특정 시간 지정
+        var d4 = new Date(2015, 05, 11); //월: 0~11월 => 2015년 6월 11일
+        document.getElementById("lblDate4").innerHTML = d4.getTime();
+        
+        //월만 표현
+        document.getElementById("lblDate5").innerHTML = ((new Date().getMonth()) + 1) + "월";
+        // 6월인데 5로 표시, 그래서 정확한 표현시 +1을 해야함.
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+    
+    //배열 선언
+    var fruits = ["Apple", "Banana", "Cherry", "Apple", "Banana", "Cherry"];
+
+    //배열 출력
+    for(var i = 0; i< fruits.length; i++) {
+        console.log(fruits[i]);
+    }
+
+    //배열의 아이템에 해당하는 인덱스 출력
+    var indexCherry = fruits.indexOf("Cherry"); //2
+    console.log(indexCherry);
+    
+    var indexCherry2 = fruits.indexOf("Cherry",3); //5
+    console.log(indexCherry2);
+
+    var indexCherry3 = fruits.lastIndexOf("Cherry"); //5
+    console.log(indexCherry3);
+
+    var idxNone = fruits.indexOf("Durian"); // -1: 없다.
+    console.log(idxNone);
+
+</script>

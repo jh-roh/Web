@@ -1,0 +1,26 @@
+<script>
+    //Spilt 함수 : 구분자를 사용해서, 문자열 분리해서 배열에 저장
+    var xy = "1234 5678 4321 8765";
+    var gambit = xy.split(" ");
+    console.log(gambit[0]);
+    console.log(gambit[1]);
+    console.log(gambit[2]);
+    console.log(gambit[3]);
+
+
+    for(var i = 0; i < gambit.length; i++) {
+        console.log(gambit[i]);
+    }
+
+    var xy2 = "1234,5678,4321,8765";
+    var gambit2 = xy2.split(",");
+    console.log(gambit2[0]);
+    console.log(gambit2[1]);
+    console.log(gambit2[2]);
+    console.log(gambit2[3]);
+
+
+    for(var i = 0; i < gambit2.length; i++) {
+        console.log(gambit2[i]);
+    }
+</script>

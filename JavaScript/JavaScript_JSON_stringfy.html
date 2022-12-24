@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //개체 리터럴 배열
+        var products = [{name: "Apple", price: 150},{name: "Orange", price: 100}];
+    
+    
+        //출력
+        // document.body.innerText = products; //[object Object],[object Object] 
+
+        // document.body.innerText = JSON.stringify(products, null, 20);
+        
+
+        var product = {
+            ModelName: "좋은 상품",
+            Price : 2000,
+            Quantity: 5,
+
+        };
+
+        for(var item in product){
+            document.write(item + "<br />");
+        }
+
+        for(var item in product) {
+            document.write(item + ": " + product[item] +"<br />");
+        }
+
+    
+    </script>
+</body>
+</html>

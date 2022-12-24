@@ -1,5 +1,16 @@
 <script>
 
+var person = {
+    name : "홍길동",
+    age : 21,
+    getAge : function() {
+        return this.age;
+    },
+};
+
+// document.write(person.name);
+
+
 //개체 리터럴
 var obj = {
     str: "문자열",
@@ -12,10 +23,34 @@ var obj = {
     }
 };
 
-console.log(obj.str);
-console.log(obj.num);
-console.log(obj.bln);
-console.log(obj.images[1]);
-console.log(obj.pos.x);
-console.log(obj.func());
+// console.log(obj.str);
+// console.log(obj.num);
+// console.log(obj.bln);
+// console.log(obj.images[1]);
+// console.log(obj.pos.x);
+// console.log(obj.func());
+
+
+//개체 리터럴 : JSON
+
+var Stage = {
+    Small : {
+        Width : 400,
+        Height : 400
+    },
+    Big : {
+        Width : 500,
+        Height : 500
+    },
+};
+
+//개체 리터럴 접근
+console.log(Stage.Small.Width);
+console.log(Stage.Small.Height);
+console.log(Stage.Big.Width);
+console.log(Stage.Big.Height);
+
+//문자열 인덱서 개념으로도 접근 가능
+console.log(Stage["Small"].Width);
+console.log(Stage["Big"]["Height"]);
 </script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        var arr = [30,20,10,50, 40];
+
+        //join
+        var varJoin = arr.join();
+        document.write(arr + "<br />");
+        document.write(varJoin + "<br />");
+        varJoin = arr.join(";");
+        document.write(varJoin + "<br />");
+
+        //sort
+        var varSort = arr.sort(); //오름차순 정렬
+        document.write(varSort + "<br />"); 
+
+        //reverse
+        var varReverse = arr.sort().reverse(); //내림차순 정렬
+        document.write(varReverse + "<br />");
+
+        var colors = ["red", "green", "blue"];
+        var otherColors = ["black", "yellow"];
+
+        //concat
+        var moreColors = colors.concat(otherColors);
+
+        document.write(moreColors + "<br />");
+
+        //slice
+        var rgbColors = moreColors.slice(0,2); //0,1
+        document.write(rgbColors + "<br />");
+
+    
+        rgbColors = moreColors.slice(1,4); //1<= slice < 4
+        document.write(rgbColors + "<br />"); // g, b, b
+
+   </script> 
+</body>
+</html>

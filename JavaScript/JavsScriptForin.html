@@ -1,0 +1,28 @@
+<script>
+    var arr = [1,2,3];//배열(컬렉션)
+
+    var indexTotal = 0;
+    
+    for(var elem in arr){
+        console.log(elem);
+        indexTotal += elem;
+    }
+    console.log(indexTotal);
+    document.write(indexTotal);
+
+    var total = 0;
+    for(var key in arr) {
+        total += arr[key];
+    }
+    document.write(total);
+
+
+    var obj = {"a" : "Apple", "o" : "Orange", "p": "Pear"}; //개체 리터럴
+
+    var str = "";
+    for(var key in obj){
+        str += obj[key] + ", ";
+    }
+
+    document.write(str);
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 복사 기능 구현하기</title>
+</head>
+<body>
+    <script>
+
+        function printArray(arr) {
+            for(var i = 0; i < 2; i++) {
+                for(var j = 0; j < 2; j++) {
+                    document.write(arr[i][j] + " ");
+                }
+                document.write("<br />");
+            }
+        }
+
+        //ArrayClone 함수 : 매개변수로 넘어온 배열을 복사해주는 함수
+        function ArrayClone(arr) {
+             // 배열 복사
+            var newArr = []; //배열형
+            for(var i = 0; i < arr.length; i++) {
+                newArr[i] = arr[i].slice();
+            }
+
+            return newArr;
+        }
+
+        //2차원 배열 생성
+        var arr = [[1,2], [3,4]];
+        printArray(arr);
+        
+        
+        var arr2 = ArrayClone(arr);
+        printArray(arr2);
+
+        var arrReverse = ArrayClone(arr).reverse(); //배열을 반대로
+        printArray(arrReverse);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

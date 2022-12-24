@@ -1,0 +1,42 @@
+<script>
+    var obj = new Object();
+
+    obj.name = "난 개체야~"; // set
+    document.write(obj.name + "<br />");
+    
+    // Object로 묶어서 관리
+    var obj2 = new Object();
+
+    obj2.name = "좋은 상품";
+    obj2.price = 1000;
+    obj2.getPrice = function() {
+        return obj2.price;
+    };
+
+    document.write(obj2.getPrice() +"<br />");
+    document.write(obj2.name +"<br />");
+    document.write(obj2.price +"<br />");
+    document.write(obj2["name"] +"<br />");
+    document.write(obj2["price"] +"<br />");
+    
+    var product = {}; //개체 리터럴,JSON
+
+    product.name = "좋은 책";
+    product.price = 100;
+    document.write(product.name + ", " + product.price + "<hr />");
+
+    var person = {
+        name: "좋은 사람",
+        age: 21,
+        getAge : function() {
+            return this.age;
+        },
+        color : ['red', 'green', 'blue'],
+        nickNames: [{name: "홍길동"}, {name: "백두산"}],
+    };
+
+    document.write(person.name + ", " + person.getAge() + ", " + person.color[1]  + "<hr />");
+    document.write(person.nickNames[0].name + ", " + person.nickNames[1].name)
+
+
+</script>

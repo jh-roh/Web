@@ -1,0 +1,15 @@
+<script>
+    function printNames(names) {
+        var r = "";
+
+        if(typeof names === "string") {
+            r = names;
+        }
+        else {
+            r = names.join(", ");
+        }
+        return r;
+    }
+    document.write(printNames("red" + "<br />"));
+    document.write(printNames(["red", "plus", "minus"]));
+</script>
