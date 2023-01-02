@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call by value, Call by reference</title>
+
+    <script type="text/javascript">
+        //거꾸로 함수
+        //기본 타입은 Call by value(값 전달)
+        var hi = "안녕하세요"; //문자열, 숫자
+
+        //객체 타입 : Call by reference(참조 전달)
+        var obj = {name: "홍길동"};
+
+        function print(msg) {
+            document.getElementById('message').innerHTML += msg +"<br />";
+        }
+        function reverseFunc(str) {
+            str = str.split('').reverse().join('');
+            return str;
+        }
+
+        function reverseFuncObject(obj) {
+            obj.name = reverseFunc(obj.name);
+            return obj;
+        }
+
+        window.onload = function() {
+            print(reverseFunc(hi)); //.요세하녕안
+            print(hi); //안녕하세요
+
+            print(reverseFuncObject(obj).name);
+            print(obj.name);
+        };
+    </script>
+</head>
+<body>
+    <span id="message"></span>
+</body>
+</html>

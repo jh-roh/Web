@@ -1,0 +1,21 @@
+<script>
+    var func1 = function() {
+        console.log("함수1 호출");
+    }
+
+    //함수 호출
+    func1();
+
+    //함수 선언과 동시에 호출: IIFE
+    (function() { 
+        console.log("함수2 호출");
+    }());
+    (function() { 
+        console.log("함수3 호출");
+    })();
+
+    // +, -, ~, ! 연산자를 통한 IIFE 축약형
+    +function() {
+        console.log("함수4 호출");
+    }();
+</script>

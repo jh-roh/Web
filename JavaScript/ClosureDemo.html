@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 사용 예제</title>
+    <script type="text/javascript">
+        
+        function prn(msg) {
+            document.write(msg + "<br />");
+        }
+        function Increment(num) {
+            var sum = 0;
+            //안쪽 함수
+
+            return function() {
+                sum += num;
+
+                return sum;
+            }
+        }
+
+       var a = Increment(2);
+       prn(a()); 
+       prn(a()); 
+       prn(a()); 
+
+       var b = Increment(3);
+
+       prn(b());
+       prn(b());
+       prn(b());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

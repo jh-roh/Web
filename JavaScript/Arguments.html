@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments 개체</title>
+
+    <script type="text/javascript">
+        //Arguments 개체 테스트
+        function printf(msg){
+            document.write(msg + "<br />");
+        }
+
+        function argumentsTest() {
+            if(arguments[0]) {
+                printf(arguments[0]);
+            }
+
+            printf(arguments.length);
+
+            return typeof arguments;
+        };
+
+        //넘겨온 수들의 합계
+        function sum() {
+            var hap = 0;
+            for(var i = 0; i < arguments.length; i++) {
+                hap += arguments[i];
+            }
+
+            return hap;
+        }
+        
+        window.onload = function() {
+            printf(argumentsTest());
+            argumentsTest("Hello");
+            argumentsTest("Bye", 1234);
+       
+            printf(sum(1,2,3,4,5,6,7));
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

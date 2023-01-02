@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수는 JavaScript에서 가장 중요한 부분</title>
+
+    <script type="text/javascript">
+
+        //일반적인 함수 모양
+        function prn(msg) {
+            document.write(msg + "<br />");
+        }
+
+        prn("안녕하세요.");
+
+        // 익명 함수(무명 함수; anonymous function) 를 변수에 할당 하는 방법
+        var greet = function(x) {prn(x);};
+        greet("반갑습니다");
+
+        //Function 생성자로 함수 만들기 : 런타임에 임의로 함수를 작성할 수 있는 장점
+        var func = new Function("x", "prn(x);");
+        func("또 만나요");
+        //함수를 매개 변수로 또 다른 함수에게 전달
+        function square(x) {
+            return x * x;
+        }
+
+        function operateOn(num, func){
+            return func(num);
+        }
+
+        prn(operateOn(16, square)); //square(16); => 256
+        //반환값 자체를 함수(익명)로
+        function makeIncrementer() {
+            return function(x) {return x + 1; };
+        }
+
+        var inc = makeIncrementer();
+        prn(inc(7));
+
+        //함수는 그 자체가 하나의 개체이다.
+        function sayHi(x) {
+            prn("안녕, " + x);
+        }
+
+        sayHi.aaa = "aaa";
+        sayHi["bbb"] = "bbb";
+        prn(sayHi.aaa + ", " + sayHi.bbb);
+
+        //배열에 함수를 담아서 사용 가능
+        var arr = [];
+
+        arr[0] = function(x) {return x * x};
+        arr[1] = arr[0](2); //2 * 2 = 4
+        arr[2] = arr[0](arr[1]); //4 * 4 = 16
+        arr[3] = arr[0](arr[2]); //16 * 16 = 256
+        prn(arr[3]);
+
+        //함수는 개체의 속성으로도 사용 가능
+        var obj = {
+            "aaa" : function() { return "aaaaa";},
+            "toString" : function() { return "새롭게 정의된 toString";}
+        };
+        prn(obj.aaa()); // AAA
+        prn(obj); //obj.toString()
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

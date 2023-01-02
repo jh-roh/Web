@@ -1,0 +1,38 @@
+<script>
+    //자바스크립트의 비교 방법 정리
+
+    var s1 = '문자열';
+    var s2 = '문자열';
+
+    //console.log(s1 == s2); // false
+
+    var n = 1234;
+
+    //console.log(s1 == n); // false
+
+    s1 = '1234';
+    
+    //자바스크립트의 dynamic 스타일
+    //console.log(s1 == n); // false? => true : number 형식을 문자열로 처리
+
+    var bln = true;
+
+    // console.log(bln == s1); //false
+
+    s1 = 'true';
+    //console.log(bln == s1); //true? =? false : 혼동
+
+    s1 = '1'; bln=true;
+    console.log(bln == s1); //('1' == true) => true : 혼동
+
+
+    //결론 : 자바스크립트에서의 데이터 비교는 ==를 사용하지 말고 무조건 ===을 사용하자
+
+    s1= 'true'; bln=true;
+    console.log(s1 == bln);
+
+    s1 = '1'; bln=true;
+    console.log(s1 === bln);
+
+
+</script>

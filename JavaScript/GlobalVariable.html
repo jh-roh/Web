@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역변수(Global Variable)</title>
+    <script type="text/javascript">
+        
+        function print(msg) {
+            document.write(msg + "<br >");
+        }
+        function sum(first, second) {
+            temp = first;
+            return (temp + second);
+        }
+
+        document.write(sum(1,3) + "<br />");
+        document.write("전역 변수 : " + temp + "<br />");
+        temp = 30
+        print(temp);
+        print(window.temp);
+
+        temp2 = "하이";
+        if(!window.temp2) {
+            print("temp2 변수가 정의되지 않음");
+        }
+        else {
+            print("temp2 변수가 정의됨");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

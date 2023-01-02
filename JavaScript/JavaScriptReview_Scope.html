@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>범위(전역변수, 지역변수)</title>
+    <script>
+        //변수 선언 : 전역변수(전역객체; Global Object) : Window 객체에 속성으로 포함
+        var strTest = '안녕하세요';
+
+        console.log(strTest);
+        console.log(window.strTest);
+
+        //지역변수(Local)
+        var localFunc = function() {
+            var strHi = '반갑습니다.'; //함수 내에 선언된 변수는 해당 함수의 로컬 변수
+        };
+
+        //console.log(strHi); // localFunc의 폐쇄된 영역에서 선언되었기에 호출 불가
+
+        //지역 변수(local)를 외부에서 사용하고자 한다면?
+
+        var loclFunc2 = function() {
+            var strBye = "잘가요~"; //함수 내에 선언된 변수는 해당 함수의 로컬 변수
+
+            return strBye; ; //외부에서 사용하기 위한 반환
+        };
+        console.log(localFunc2()); //함수 자체를 호출: 잘가요~ 출력
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

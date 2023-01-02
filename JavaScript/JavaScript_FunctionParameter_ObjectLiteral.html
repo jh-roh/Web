@@ -1,0 +1,26 @@
+<script>
+    //개체리터럴로 함수 파라미터 전달
+
+    function addSupportEmail(contact) {
+        for (let index = 0; index < contact.emails.length; index++) {
+            
+            if(contact.emails[index] === "support@naver.com") {
+                return contact;
+            }
+        }
+
+        contact.emails.push("support@naver.com");
+        return contact;
+    }
+
+    var c1 = {name: "홍길동", emails: ["a@a.com", "b@b.com"]};
+    var c2 = {name: "백두산", emails: ['c@c.com',"support@naver.com"]};
+
+    var cust1 = addSupportEmail(c1);
+    var cust2 = addSupportEmail(c2);
+
+    console.log(cust1);
+    console.log(cust2);
+
+
+</script>

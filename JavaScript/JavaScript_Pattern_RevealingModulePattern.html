@@ -1,0 +1,36 @@
+<script>
+    var myModule = function() {
+
+        var cnt = 0;
+        //private 메서드
+        var func1 = function() {
+            cnt++;
+            console.log("Function 1 : " + cnt);
+        };
+
+        var func2 = function() {
+            cnt++;
+            console.log("Function 2 : " + cnt);
+        };
+
+        //public 메서드로 외부에 공개
+        return {
+            method1: func1,
+            method2: func2,
+        };
+    };
+
+
+    var module = myModule();
+    module.method1();
+    module.method2();
+    module.method1();
+    module.method2();
+
+    myModule().method1();
+    myModule().method2();
+    myModule().method1();
+    myModule().method2();
+
+    
+</script>

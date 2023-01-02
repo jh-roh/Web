@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+    <script>
+        //Closure 함수 자체에서 전역객체(변수) 호출
+
+        var closureFunc = function() {
+            var strTest = '함수 내에서 선언된 변수';
+        };
+
+        //console.log(strTest);
+
+        var publicTest = '함수 외부에서 선언된 변수';
+
+        var closureFunc2 = function() {
+            var strTest = "함수 내에서 선언된 변수";
+            console.log(publicTest);
+        }
+
+        closureFunc2();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

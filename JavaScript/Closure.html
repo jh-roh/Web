@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저(Closure)</title>
+    <script type="text/javascript">
+       
+       //클로저(Closure)
+        var a = "바깥쪽";
+        var first = function() {
+            var b = "중간쪽";
+
+            var second = function() {
+                var c = "안쪽";
+                
+                var third = function() {
+                    document.write(a + b + c);
+                };
+
+                third();
+            }
+            second();
+        };
+
+        first();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<script>
+
+    //함수 선언
+    var f1 = function() {
+        console.log("안녕하세요");
+    };
+
+    //함수를 매개 변수로 받아서 호출해주는 헬퍼 함수 선언
+    var fHelper = function(f) {
+        console.log("함수 시작");
+        
+        try
+        {
+            f();
+        }
+        catch(e) {
+            console.log(e);
+        }
+        console.log("함수 종료");
+    };
+
+    // 헬퍼 함수를 통해 함수 호출
+    fHelper(f1);
+
+</script>
