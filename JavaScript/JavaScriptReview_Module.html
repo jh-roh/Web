@@ -10,20 +10,17 @@
     <script>
         //전역(Global Scope)
         //Self 실행 함수
-        +function() {
+        (function() {
             //변수(멤버 변수)
             var strHi = "안녕하세요";
             //함수 영역
             var moduleFunc = function() {
                 //새로운 영역이 만들어짐
-
                 return strHi;
             };
             console.log(moduleFunc()); //같은 네임스페이스만의 함수 호출
-        }(); //바로 실행
+        })(); //바로 실행
 
-        //console.log(strHi);
-    </script>
-    
+    </script>    
 </body>
 </html>

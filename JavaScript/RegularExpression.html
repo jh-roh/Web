@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규식(Regular Expression)</title>
+    <script type="text/javascript">
+        function printf(msg) {
+            document.write(msg + "<br />");
+        }
+
+        //정규식을 사용한 ...
+        //Search
+        var str = "abcdef";
+        var result = str.search(/ef/); // /패턴/
+        printf(result);
+
+        // Exec
+        var input = '안녕하세요. <strong>엄청나게</strong> 반갑습니다.';
+        var expr = /<strong>(.*)<\/strong>/; //.모든 문자, * 0개 이상
+        var results = expr.exec(input);
+
+        printf("매치된 문자열 : " + results[0]); //<strong>엄청나게</strong>
+        printf("()로 캡춰된 그룹 : " + results[1]); //엄청나게
+
+
+        // replace
+        var colors = "Red Green Blue".replace(/Green/g, "Yellow");
+        printf(colors);
+
+        var updated = colors.replace(/(\w+) (\w+) (\w+)/g, function(match,capture1, capture2,capture3) {
+            return "새롭게 변경된 문자열 : " + capture3 + ", " + capture2 + ", " + capture1;
+        }); //Yellow Blue, Red
+
+        printf(updated);
+
+        //test
+        var isNumber = /\d/.test("abcd123");
+
+        printf(isNumber);
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

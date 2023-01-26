@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 유효성 검사 - 입력 확인</title>
+    <script>
+        function CheckLogin() {
+            var userId = document.getElementById("txtUserID");
+            if(userId.value == "") {
+                alert("아이디를 입력하시오.");
+                userId.focus();
+                userId.select();
+            }
+            else {
+                //전송 관련 코드
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" name="txtUserID" id="txtUserID" />
+    <input type="button" name="btnLogin" id="btnLogin" value="로그인"  
+           onclick="CheckLogin()"
+    />
+</form>
+
+</body>
+</html>

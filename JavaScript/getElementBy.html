@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_getElementByTagName, getElementsByName()</title>
+</head>
+<body>
+    <ol id="lst">
+        <li>
+            <span>안녕1</span>
+        </li>
+        <li>
+            <span>안녕2</span>
+        </li>
+        <li>
+            <span>안녕3</span>
+        </li>
+        <li>
+            <span>안녕4</span>
+        </li>
+        <li>
+            <span>안녕5</span>
+        </li>
+    </ol>
+
+    <hr />
+
+    <input type="text" name="txtUnitPrice" value="" />
+    <br/>
+    <input type="text" name="txtUnitPrice" value="" />
+    <br/>    
+    <input type="text" name="txtUnitPrice" value="" />
+    <br/>
+    <input type="button" value="값 가져오기" onclick="getValues();" />
+
+    <script>
+
+        function getValues() {
+            //name 속성이 동일한 개체를 가져오기
+            var unitPrices = document.getElementsByName("txtUnitPrice");
+
+            for(var i = 0; i < unitPrices.length; i++) {
+                var unit = unitPrices[i].value;
+                //console.log(unit);
+                alert(unit);
+            }
+
+        }
+
+        var lst = document.getElementById("lst");
+        lst.style.backgroundColor = "yellow";
+
+        var ols = document.getElementsByTagName("ol"); //배열로 가져와라.
+        console.log(ols);
+
+        var cnt = document.getElementsByTagName("*"); // 모든 요소
+        console.log(cnt.length);
+
+        var doms = document.getElementById("lst").getElementsByTagName("li");
+        console.log(doms.length);
+
+        // doms 반복
+        for(var i = 0; i < doms.length; i++) {
+            console.log(doms[i]);
+        }
+
+
+    </script>
+</body>
+</html>

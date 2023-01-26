@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트에서 쿠키 사용</title>
+    <script type="text/javascript">
+        //페이지 로드 이벤트
+
+        window.onload = Page_Load;
+
+        function Page_Load() {
+            //btnSubmit_Click 버튼의 클릭이벤트 적용
+            document.getElementById("btnSubmit").onclick = btnSubmit_Click;
+        }
+
+        function btnSubmit_Click() {
+            //txtName에 저장된 값을 쿠키에 저장
+            setCookie();
+        }
+
+        //쿠키 저장함수
+        function setCookie() {
+            var txtName = document.getElementById("txtName").value;
+            //쿠키 저장
+            
+        }
+     </script>
+</head>
+<body>
+    <form action="#">
+        <input type="text" name="txtName" id="txtName" />
+        <input type="button" name="btnSubmit" id="btnSubmit" value="로그인" />
+    </form>
+</body>
+</html>

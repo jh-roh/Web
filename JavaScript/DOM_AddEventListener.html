@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_DOM_AddEventListener : 특정한 DOM에 대해서 click, change와 같은 이벤트 적용하기</title>
+</head>
+<body>
+    <input type="text" id="drink"/>
+    <input type="text" id="burger"/>
+    <input type="button" value="버튼" onclick="bb(getJuice.value, getMeal.value)" />
+
+    <hr />
+    <input type="button" name="btnClick" id="btnClick" value="클릭"  />
+    <hr />
+
+    <!-- 드롭다운 리스트(콤보박스, 리스트박스) -->
+    <select id="lstMessage" onchange="alert('변경')">
+        <option value="안녕하세요">1</option>
+        <option value="반갑습니다">2</option>
+    </select>
+
+    <script>
+        //[1] click 이벤트 연습
+        var getJuice = document.getElementById('drink');
+        var getMeal = document.getElementById('burger');
+
+        function bb(juice, meal) {
+            alert( '시원하고 달콤한 ' + juice + '와 맛있는 ' + meal);
+        }
+
+        function doClick() {
+            alert("버튼 클릭됨");
+        }
+        document.getElementById("btnClick").addEventListener("click", doClick);
+        
+        // //[2] change 이벤트 연습
+        // document.getElementById("lstMessage").addEventListener("change", function() {
+        //     alert("변경됨");
+        // });
+    </script>
+</body>
+</html>

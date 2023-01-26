@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 확인 유효성 감사, 사용자 정의 유효성 검사</title>
+    <script>
+        function OK() {
+            var txtPassword = document.getElementById("txtPassword").value;
+            var txtPasswordConfirm = document.getElementById("txtrPasswordConfirm").value;
+
+            //값이 같은지 다른지 비교
+            if(txtPassword !== txtPasswordConfirm ) {
+                alert('암호가 틀립니다. 다시 확인해주세요');
+                document.getElementById("txtrPasswordConfirm").select(); //선택
+            }
+            else {
+                alert("유효성 검사 통과!!");
+            }
+        }
+
+        function btnOK_Click() {
+
+            // 텍스트 박스의 값을 가져와서 정수형으로 형식 변환
+            var num = parseInt(document.getElementById("txtNumber").value);
+            // 사용자 정의 로직 구현 부분
+            if(num % 2 == 0) {
+                alert('유효성 검사 통과');
+            }
+            else {
+                alert("유효성 검사 실패!!!");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        암호 : <input type="text" id="txtPassword" name="txtPassword" /> <br />
+        암호 확인 : <input type="text" id="txtrPasswordConfirm" name="txtPasswordConfirm" /><br />
+        <hr />
+        <input type="button" value="확인" onclick="OK();" />
+
+        <hr />
+
+        짝수만 입력 : <input type="text" name="txtNumber" id="txtNumber" />
+        <hr />
+        <input type="button" value="확인" onclick="btnOK_Click()" />
+    </form>
+</body>
+</html>

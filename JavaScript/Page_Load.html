@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window.onload 이벤트 : load 이벤트를 처리하는 onload 이벤트 처리기</title>
+    <script type="text/javascript">
+        //배경색 변경
+        //페이지 로드시 자바스크립트 실행
+        // [1] 함수 지정
+        // window.onload = pageLoad;
+        // function pageLoad() {
+        //     changeColor();
+        //     changeSize();
+        // };
+
+        //[2] 익명 함수 : anonymous function 스타일
+        window.onload = function() {
+            changeColor();
+            changeSize();
+        };
+
+        function changeColor() {
+            var myDiv = document.getElementById("myDiv").style.backgroundColor = "Red";
+        }
+
+        function changeSize() {
+            document.getElementById("myDiv").style.height = "100px";
+        }
+    </script>
+
+</head>
+<body>
+    <div id="myDiv" style="height: 50px;">
+        페이지가 로드되고 난 후 배경색이 Yellow로 변경됩니다.
+    </div>
+    <script type="text/javascript">
+        var myDiv = document.getElementById("myDiv").style.backgroundColor = "Yellow";
+    </script>
+</body>
+</html>

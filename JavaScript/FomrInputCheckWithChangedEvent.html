@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function checkForm() {
+            if(blnChange) {
+                //alert("입력중인 데이터가 있습니다.");
+                
+                if(confirm("입력중인 데이터가 있는데 이동하겠습니까?")) {
+                    alert("이동");
+                }
+                else {
+                    return true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="return checkForm();">home</a><br/>
+    <textarea onchange="blnChange = true;"></textarea><br/>
+    <input type="submit" value="저장" />
+</body>
+</html>

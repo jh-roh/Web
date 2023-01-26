@@ -1,37 +1,39 @@
 <script>
     //함수, 클로저 => 모듈화 => 패턴화
     //myObject란 이름으로 새로운 객체형을 생성 : 패턴화
-    var myObject =
-        (function() {
-            var strhi = '안녕하세요';
+    
+    var myObject = (function() {
+            var strHi = '안녕하세요';
             var intCount = 0;
-
-            function hi() {
-                intCount += 1; //함수 호출할때마다 1씩 증가
-                return strhi;
+            var hi = function() {
+                intCount += 1; //함수 호출할 때마다 1씩 증가
+                return strHi;
             };
 
             var getCounter = function() {
                 return intCount;
             };
 
-            // return strhi; //[1] 문자열
-            return {
-                // getHi: function () {
-                //     return strhi; //[2]객체형
-                // },
-                getHi: hi,
-                getHi2: function() {
-                    intCount += 1; //함수 호출할때마다 1씩 증가
-                    return '반갑습니다.';
-                },
-                //getCount: intCount
-                getCount: getCounter,
-            }
-        })();
+            // return strHi; //[1] 문자열
 
-    console.log(myObject.getHi());
-    console.log(myObject.getHi2());
-    console.log(myObject.getCount());
+            return {
+                    // getHi: function() {
+                    //     return strHi;
+                    // },
+                    getHi: hi,
+                    getHi2: function() {
+                        return strHi;
+                    },
+                    getCount: getCounter,
+                };
+        }());
+
+
+    // console.log(myObject); //[1]
+    console.log(myObject.getHi()); //[1]
+    console.log(myObject.getHi2()); //[1]
+    console.log(myObject.getHi()); //[1]
+    console.log(myObject.getHi()); //[1]
+    console.log(myObject.getCount()); //[1]
 
 </script>

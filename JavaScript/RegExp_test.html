@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp.prototype.test()</title>
+</head>
+<body>
+    <script>
+        //정규식 테스트
+        function testRegExp(regex, str){
+            var r;
+            if (regex.test(str)) {
+                r = "포함한다.";
+            }
+            else {
+                r = "포함하지 않는다.";
+            }
+            return r;
+        }
+
+
+        //[2] 테스트
+        alert(testRegExp(/\d/, "안녕"));
+        //이메일을 검사하는 정규표현식
+        alert(testRegExp(/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/, "njh8810@naver.com"));
+    
+        //[3] 직접 테스트
+        if(/\d/.test(1234)) {
+            alert('숫자를 포함하는군요...')
+        }
+        
+    </script>
+</body>
+</html>

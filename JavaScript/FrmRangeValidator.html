@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>범위 확인 유효성 검사</title>
+    <script>
+        function CheckLogin() {
+
+            //값을 받아서 정수형으로 저장
+            var varAge = parseInt(document.getElementById("txtAge").value);
+            if(varAge < 1 || varAge > 150 ||  isNaN(varAge)) {
+                alert("나이는 1부터 150 사이의 값을 입력하시오.");
+                document.getElementById("txtAge").focus();      //포커스
+            }
+            else {
+                alert('통과되었습니다.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        나이:
+        <input type="text" name="txtAge" id="txtAge" />(1~150)<br/>
+        <input type="button" name="btnLogin" id="btnLogin" value="로그인" onclick="CheckLogin()"/>
+    </form>
+</body>
+</html>

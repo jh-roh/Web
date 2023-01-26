@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM을 사용하여 새로운 요소 생성, document.createElement</title>
+</head>
+<body>
+    <select>
+        <option value="value">text</option>
+    </select>
+
+    <hr />
+
+    <select id="lstNumber" name="lstNumber"></select>
+
+
+    <script>
+        var lst = document.getElementById('lstNumber');
+
+        for(var i = 0; i < 100; i ++) {
+            //<option value="0">1번</option>
+            var opt = document.createElement("option");
+            opt.value = i;
+            opt.text = (i + 1) + "번";
+
+            //<select> 태그에 추가
+            lst.add(opt, null);
+        }
+
+
+
+    </script>
+</body>
+</html>

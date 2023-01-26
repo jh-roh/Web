@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+<body>
+    <ul id="idBackEnd" class="back">
+        <li class="beginner">1. C#</li>
+        <li class="advanced">2. Asp.net</li>
+        <li class="advanced">3. SQL</li>
+    </ul>
+
+    <script>
+        var ul = document.querySelector("ul");
+        console.log(ul); //all
+
+        var cs = document.querySelector("li");
+        console.log(cs);
+
+        var id = document.querySelector("#idBackEnd");
+        console.log(id); // 1
+
+        var advanced = document.querySelector(".advanced"); //2와 3이 아닌 2만 가져옴. 하나의 결과값을 가져옴.
+
+        console.log(advanced);
+
+        var advancedAll = document.querySelectorAll(".advanced");
+        console.log(advancedAll);
+    </script>
+</body>
+</html>

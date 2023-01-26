@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+        //Javascript의 타이머 : setTimeout(), clearTimeout(), setInterval(), clearInterval()
+        //[1] setTimeout(): 지정된 시간후에 딱한번 실행하는 타이머 생성
+        setTimeout(function() {
+            console.log("[1] 꽝~");
+        }, 3000);
+
+        //[2] clearTimeout()
+        var id = setTimeout(() => {
+            console.log("[2] 꽝~");
+        }, 3000);
+
+        clearTimeout(id); //setTimeout 지정한 타이머 중지
+
+        //[3] setInterval() : 계속 실행되는 타이머
+        var cnt = 0;
+        var si = setInterval(function() {
+            console.log("[3] 꽝~");
+            if(++cnt == 5) {
+                clearInterval(si);
+            } 
+        }, 3000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트상자의 엔터키 이벤트 잡기</title>
+    
+    <script type="text/javascript">
+        function EnterKeyTest(event) {
+            //텍스트박스에 엔터키 입력시에만 반응
+            if(event.which == 13 || event.keyCode == 13) {
+                //alert('엔터키 입력했군요.');
+
+                var txtInput = document.getElementById('txtInput');
+                window.alert(txtInput.value);
+
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="txtInput" 
+        onkeypress="return EnterKeyTest(event);"
+    />
+
+</body>
+</html>

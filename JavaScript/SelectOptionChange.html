@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Option Change</title>
+    <script type="text/javascript">
+        function ChangeFavorite() {
+            var myFavorites = document.getElementById("lstFavorites");
+            //선택된 인덱스 출력
+            //alert(myFavorites.selectedIndex);;
+            
+            //선택된 인덱스에 해당하는 값(value) 사용
+            // alert(myFavorites.options[myFavorites.selectedIndex].text    //텍스트
+            //     + ","
+            //     + myFavorites.options[myFavorites.selectedIndex].value); //값
+
+            var divPrint = document.getElementById("divPrint");
+            divPrint.innerText = myFavorites.options[myFavorites.selectedIndex].text    //텍스트
+                + ","
+                + myFavorites.options[myFavorites.selectedIndex].value;
+        }
+    </script>
+
+
+</head>
+<body>
+    <h3>즐겨찾기</h3>
+    <select id="lstFavorites" onchange="ChangeFavorite();">
+        <option value="0">데브렉</option>
+        <option value="1">비주얼아카데미</option>
+        <option value="2">닷넷코리아</option>
+        <option value="3">자바캠퍼스</option>
+    </select>
+    <hr/>
+    <div id="divPrint">
+    </div>
+</body>
+</html>

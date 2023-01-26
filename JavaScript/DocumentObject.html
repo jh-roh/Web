@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 개체</title>
+</head>
+<body>
+    <ul id="idFrontEnd" class="front">
+        <li class="beginener">1. Html</li>
+        <li class="beginener">2. CSS</li>
+        <li class="intermediate">3. JavaScript</li>
+    </ul>
+
+    <script>
+        var frontEnd =  document.getElementById("idFrontEnd");
+
+        console.log(frontEnd);
+        console.log(frontEnd.getAttribute('class')); //front
+        frontEnd.setAttribute('class', 'front-end');
+        console.log(frontEnd.getAttribute('class')); //front-end
+        console.log(frontEnd.childNodes); //<li> 태그들 + 공백들
+
+        var items = document.getElementsByTagName("li");
+        console.log(items);
+
+        var easy = document.getElementsByClassName('beginener');
+        console.log(easy);
+
+    </script>
+</body>
+</html>

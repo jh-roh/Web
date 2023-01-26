@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Button Click Event</title>
+</head>
+<body>
+    <div>
+        <button id="btnClick" >click</button>
+        <hr />
+        <div id="divContent">
+
+        </div>
+
+        <script>
+            function buttonHandler() {
+                var divContent = document.getElementById("divContent").innerHTML = "<h1>버튼 클릭 이벤트 처리기</h1>"
+            }
+
+
+            var btnClick = document.getElementById('btnClick');
+
+            // 익명함수 사용
+            // btnClick.onclick = function() {
+            //     alert("test");  
+            // };
+            btnClick.onclick = buttonHandler;
+        </script>
+    </div>
+</body>
+</html>

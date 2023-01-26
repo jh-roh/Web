@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offset : 좌표</title>
+</head>
+<body style="padding: 0; margin: 0;">
+    <div id="first">
+        안녕하세요.
+        <hr />
+    </div>
+    <div id="second" style="padding:50px;">
+        <span id="str">반갑습니다.</span> 
+    </div>
+
+    <script>
+        document.write("(" + document.getElementById("first").offsetLeft + "," + document.getElementById("first").offsetTop +")"); 
+        //x,y좌표
+        
+        document.write("(" + document.getElementById("second").offsetLeft + "," + document.getElementById("second").offsetTop +")"); 
+        //x,y좌표
+        
+        document.write("<hr />");
+
+        document.write("(" + document.getElementById("str").offsetLeft + "," + document.getElementById("str").offsetTop +")"); 
+        //x,y좌표
+
+        document.write("<hr />");
+        document.write("(" + document.getElementById("str").offsetParent); //부모 요소: Body 태그
+        document.write("<hr />");
+
+        function getDomXY(dom) {
+            var left = dom.offsetLeft; //x좌표
+            var top = dom.offsetTop; //y좌표
+            var current = dom.offsetParent;
+
+            while(current !== null) {
+                left += current.offsetLeft;
+                top += current.offsetTop;
+                current = current.offsetParent;
+            }
+
+            return { x:left, y:top};
+        }
+
+        document.write( "(" + getDomXY(document.getElementById("str")).x 
+                      + "," + getDomXY(document.getElementById("str")).y + ")");
+
+    </script>
+</body>
+
+</html>
