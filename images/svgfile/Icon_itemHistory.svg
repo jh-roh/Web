@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 19.58 19.5" style="enable-background:new 0 0 19.58 19.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#C2D8F1;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="19.58" height="19.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="구성_요소_24_1" class="st0">
+		<path id="패스_392" class="st1" d="M10.81,0v8.77h8.77V0H10.81z M17.82,7.02h-5.26V1.75h5.26L17.82,7.02z"/>
+		<rect id="사각형_558" x="14.1" y="3.3" class="st1" width="2.18" height="2.18"/>
+		<path id="패스_393" class="st1" d="M0,0v8.77h8.77V0H0z M7.02,7.02H1.75V1.75h5.26V7.02z"/>
+		<rect id="사각형_559" x="3.3" y="3.3" class="st1" width="2.18" height="2.18"/>
+		<path id="패스_394" class="st1" d="M0,10.73v8.77h8.77v-8.77H0z M7.02,17.74H1.75v-5.26h5.26V17.74z"/>
+		<rect id="사각형_560" x="3.3" y="14.02" class="st1" width="2.18" height="2.18"/>
+		<g id="그룹_229" transform="translate(10.746 10.727)">
+			<rect id="사각형_561" x="3.56" y="7.1" class="st1" width="1.77" height="1.67"/>
+			<rect id="사각형_562" x="7.06" y="7.1" class="st1" width="1.77" height="1.67"/>
+			<path id="패스_395" class="st1" d="M7.06,0v1.93H5.23V0H0v8.77h1.82V3.47h1.83V5.4h5.19V0L7.06,0z"/>
+		</g>
+	</g>
+</g>
+</svg>
