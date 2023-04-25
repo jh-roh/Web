@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        .parent {
+            display: flex;           /*부모의 display 옵션을 flex로 변경*/
+            background-color: aqua;
+            flex-direction: row;
+        }
+
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-right: 8px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">자식1</div>
+        <div class="child2">자식2</div>
+        <div class="child3">자식3</div>
+    </div>
+    
+</body>
+</html>
