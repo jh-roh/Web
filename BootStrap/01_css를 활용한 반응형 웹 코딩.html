@@ -15,12 +15,85 @@
             border: 1px solid gray;
             width: 80%;
             margin:0 auto;
+            font-size: 2vw;
 
         }
 
         nav li {
             list-style: none;
+            float: left;
+            border: 1px solid gray;
+            width: 20%;
+            box-sizing: border-box;
         }
+
+        nav ul{
+            overflow: hidden;
+        }
+
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header {
+            padding:20px 0 0 0;
+            border: 1px solid gray;
+        }
+
+        .content {
+            padding:10px;
+        }
+
+        footer {
+            border: 1px solid gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            body{
+                background-color: purple;
+            }
+
+            #wrapper {
+                width: 100%;
+                font-size: 2em;
+            }
+
+            nav li {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body{
+                background-color: orange;
+            }
+
+            #wrapper {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            body{
+                background-color: lightblue;
+            }
+            #wrapper {
+                width: 80%;
+            }
+        
+        }
+
+        @media (min-width: 1200px) {
+            body {
+                background-color: #4bf8b7 ;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -42,7 +115,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, vero quidem aliquam eaque harum pariatur totam eum alias repudiandae maxime temporibus ea magni aliquid laboriosam vel eveniet, id ad. Magnam.</p>
         </div>
         <footer>
-            <h1></h1>
+            <h1>designed by njh</h1>
         </footer>
     </div>
 </body>
