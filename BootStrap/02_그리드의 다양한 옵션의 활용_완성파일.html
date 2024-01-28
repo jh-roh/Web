@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>02_그리드의 다양한 옵션의 활용_완성파일</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        @media (min-width: 768px) and 
+        (max-width:991px) {
+            #menu {
+                height: 190px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Offset -->
+    <!-- Ordering(Push, Pull의 활용 => 데스크탑 이상일때 사용) -->
+    <!-- nesting(묶을때 사용) 중첩구문 -->
+    <div class="container">
+        <div class="row">
+            <div class="bg-info img-rounded">
+                <h1 class="text-uppercase text-center text-muted">good soup restaurnat</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 bg-danger col-sm-4 img-rounded text-center col-md-push-10" id="menu">
+                <ul class="list-unstyled">
+                    <li><a href="#">파스타</a></li>
+                    <li><a href="#">피자</a></li>
+                    <li><a href="#">샐러드</a></li>
+                    <li><a href="#">음료</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6 bg-warning col-sm-6 img-rounded col-md-offset-1 col-sm-offset-2">
+               <div class="row">
+                    <div class="col-lg-6 bg-success">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem adipisci 
+                            ex corporis sapiente eligendi cum. Cupiditate in corrupti repudiandae,
+                             et impedit sequi dicta odit provident iure, at laborum, vitae excepturi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Culpa ratione alias vero veniam, dolore laborum illum, 
+                            omnis delectus explicabo suscipit cumque unde sequi facere magnam 
+                            ipsam velit adipisci aperiam beatae.</p>
+                    </div>
+                    <div class="col-lg-6 bg-warning">
+                       <div class="row">
+                            <div class="col-lg-12 bg-warning">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem adipisci 
+                                    ex corporis sapiente eligendi cum. Cupiditate in corrupti repudiandae,
+                                     et impedit sequi dicta odit provident iure, at laborum, vitae excepturi.
+                                </p>
+                            </div>
+                            
+                            <div class="col-lg-12 bg-primary">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem adipisci 
+                                    ex corporis sapiente eligendi cum. Cupiditate in corrupti repudiandae,
+                                     et impedit sequi dicta odit provident iure, at laborum, vitae excepturi.
+                                </p>
+                            </div>
+                       </div>
+                    </div>
+               </div>
+               
+               
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Repellendus illum maiores dicta mollitia non repellat qui 
+                    nihil laborum, quasi soluta laboriosam, labore explicabo
+                     facere voluptates nisi, adipisci unde quia reiciendis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias impedit accusantium porro, animi fugiat magni quibusdam debitis deleniti voluptatum corporis architecto, nisi hic facere aliquam? Odio eos dignissimos possimus nihil.</p> -->
+            </div>
+            <div class="col-md-2 bg-primary col-sm-12 text-center img-rounded col-md-offset-1
+                    col-md-pull-10">
+                <ul class="list-unstyled">
+                    <li>메인쉐프 멤버</li>
+                    <li>김주영</li>
+                    <li>한슬기</li>
+                    <li>김주현</li>
+                    <li>이한별</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="text-center">good soup 레스토랑을 이용해 주셔서 감사합니다</h3>
+
+            </div>
+        </div> 
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>
