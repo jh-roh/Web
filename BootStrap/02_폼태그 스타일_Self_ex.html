@@ -29,88 +29,58 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <style>
+      .container {
+        background-color: orange;
+        padding: 50px 100px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <form>
+        <div class="col-md-12">
+          <form action="#">
             <div class="form-group has-success">
               <label for="exampleInputEmail1" class="control-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-user"></span>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email주소를 입력해 주세요.">
+              </div>
             </div>
             <div class="form-group has-error">
               <label for="exampleInputPassword1" class="control-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group has-success has-feedback">
-              <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
-              <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
-              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-              <span id="inputSuccess5Status" class="sr-only">(success)</span>
-            </div>
-            <div class="form-group has-success has-feedback">
-              <label class="control-label" for="inputGroupSuccess4">아이콘과 입력창</label>
               <div class="input-group">
-                <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
-              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-              <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
             </div>
-
             <div class="form-group has-warning">
               <label for="exampleInputFile" class="control-label">File input</label>
               <input type="file" id="exampleInputFile">
-              <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Check me out
-              </label>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-          <form class="form-inline">
+          <form class="form-inline" action="#">
             <div class="form-group has-success">
               <label for="exampleInputEmail1" class="control-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              <div class="input-group">
+                <span class="input-group-addon">@</span>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email주소를 입력해 주세요.">
+              </div>
             </div>
             <div class="form-group has-error">
               <label for="exampleInputPassword1" class="control-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group has-success has-feedback">
-              <label class="control-label sr-only" for="inputSuccess5">Hidden label</label>
-              <input type="text" class="form-control" id="inputSuccess5" aria-describedby="inputSuccess5Status">
-              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-              <span id="inputSuccess5Status" class="sr-only">(success)</span>
-            </div>
-            <div class="form-group has-success has-feedback">
-              <label class="control-label" for="inputGroupSuccess4">아이콘과 입력창</label>
               <div class="input-group">
                 <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" id="inputGroupSuccess4" aria-describedby="inputGroupSuccess4Status">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
               </div>
-              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-              <span id="inputGroupSuccess4Status" class="sr-only">(success)</span>
             </div>
-
             <div class="form-group has-warning">
               <label for="exampleInputFile" class="control-label">File input</label>
               <input type="file" id="exampleInputFile">
-              <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-              <label>
-                <input type="checkbox"> Check me out
-              </label>
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-
-
         </div>
       </div>
     </div>
