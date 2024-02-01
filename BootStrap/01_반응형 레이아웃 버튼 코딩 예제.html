@@ -28,17 +28,26 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <style>
-        .container > .row > div {
+        div {
             border: 1px solid red;
         }
     </style>
   </head>
   <body>
 
-
-
-
-    div.container>div.row*2>div.col-md-6
+    <!-- 
+        1) 간편하게 버튼을 만들기 위해 <a>, <button>, <input> 태그에 클래스명
+            .btn을 붙이고 원하는 스타일을 만들기 위해 .btn-색상테마 클래스
+        2) 버튼의 크기를 크거나 작게 변경하려면 .btn-lg, btn-sm, btn-xs
+        3) .btn-block 클래스명을 추가하면 가로가 꽉 찬 너비의 버튼을 만들 수 있다.
+        4) 일련의 버튼들을 버튼 그룹으로 같이 한중에 모으려면 .btn으로 된 일련의 버튼들을
+        div로 감싸고 .btn-group 클래스명을 붙여준다.
+        5) 버튼을 가지고 더 복합적인 버튼 툴바 형태의 콤포넌트를 만들려면 btn-group
+        들을 모두 감싸는 div를 만들고 .btn-toolbar 클래스명을 붙여준다.
+        6) 버튼 그룹이 수평이 아닌 수직으로 쌓이고 싶다면 .btn-group-vertical 클래스명을 부여
+     -->
+     
+    <!-- div.container>div.row*2>div.col-md-6*2>h1{heading}+p+button.btn-default{자세히보기} -->
 
     <div class="container">
         <div class="row">
@@ -50,12 +59,14 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, in? Fugiat cupiditate at architecto in 
                     dolorem voluptates iste maxime officia unde inventore deleniti odit rerum praesentium sed, hic veritatis ut.
                 </p>
-                <p><button type="button" class="btn btn-danger">자세히 보기</button></p>
+                <button type="button" class="btn btn-danger">자세히 보기</button>
+                <br><br>
             </div>
             <div class="col-md-6 bg-info">
                 <h1>heading</h1>
                 <p>Lorem</p>
-                <p><button type="button" class="btn btn-primary">자세히 보기</button></p>
+                <button type="button" class="btn btn-primary">자세히 보기</button>
+                <br><br>
             </div>
         </div>
         <div class="row">
@@ -64,14 +75,16 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, in? Fugiat cupiditate at architecto in 
                     dolorem voluptates iste maxime officia unde inventore deleniti odit rerum praesentium sed, hic veritatis ut.
                 </p>
-                <p><button type="button" class="btn btn-warning">자세히 보기</button></p>
+                <button type="button" class="btn btn-warning">자세히 보기</button>
+                <br><br>
             </div>
             <div class="col-md-6 bg-danger">
                 <h1>heading</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, in? Fugiat cupiditate at architecto in 
                     dolorem voluptates iste maxime officia unde inventore deleniti odit rerum praesentium sed, hic veritatis ut.
                 </p>
-                <p><button type="button" class="btn btn-danger">자세히 보기</button></p>
+                <button type="button" class="btn btn-danger">자세히 보기</button>
+                <br><br>
             </div>
         </div>
     </div>
