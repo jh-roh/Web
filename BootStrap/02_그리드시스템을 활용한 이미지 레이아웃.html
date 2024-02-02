@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>01_부트스트랩의 이미지 관련 클래스</title>
+    <title>02_그리드시스템을 활용한 이미지 레이아웃</title>
     <!-- 
       폼태그 스타일의 중요포인트!!
 
@@ -28,17 +28,55 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <style>
+        div{
+            border: 1px solid red;
+        }
+        
+        #img1 {
+            background-image: url(img/cabin.png);  
+            height: 650px;
+            background-size: contain;
+            /* height는 %가 먹지 않음. */
+        }
+
+        #img2 {
+            background-image: url(img/cake.png);
+            height: 650px;
+            background-size: contain;
+        }
     </style>    
   </head>
   <body>
 
-    <img class="img-rounded" src="img/puppy.jpg" alt="장미이미지1" width="238" height="238">
-    <img class="img-circle" src="img/rose.jpg" alt="장미이미지2" width="238" height="238">
-    <img class="img-thumbnail" src="img/puppy.jpg" alt="장미이미지1" width="238" height="238">
+    <!-- div.container>div.row>div.col-md-3*4 -->
+    <!-- div.container>div.row>div.col-md-3*4>img[src="img/game.png"] -->
+    <div class="container">
+        <h1>그리드 시스템을 활용한 이미지</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <img src="img/game.png" alt="" class="img-responsive" >
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="img/circus.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="img/safe.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="img/submarine.png" alt="" class="img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div id="img1" class="col-sm-6 img-responsive">
+            </div>
+            <div id="img2" class="col-sm-6 img-responsive">
+            </div>
+        </div>
+    </div>
 
-    <h1>반응형 이미지가 아닌것과 반응형 이미지</h1>
-    <img src="img/cabin.png" alt="" class="text-center">
-    <img src="img/cake.png" alt="" class="img-responsive center-block">
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
