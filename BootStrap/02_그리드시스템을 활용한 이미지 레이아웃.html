@@ -35,14 +35,19 @@
         #img1 {
             background-image: url(img/cabin.png);  
             height: 650px;
-            background-size: contain;
             /* height는 %가 먹지 않음. */
+            background-size: cover;
+            background-repeat:no-repeat;
+            background-position: center;
         }
 
         #img2 {
             background-image: url(img/cake.png);
             height: 650px;
-            background-size: contain;
+            background-size: cover;
+            background-repeat:no-repeat;
+            background-position: center;
+
         }
     </style>    
   </head>
@@ -50,6 +55,15 @@
 
     <!-- div.container>div.row>div.col-md-3*4 -->
     <!-- div.container>div.row>div.col-md-3*4>img[src="img/game.png"] -->
+
+    <!-- 
+        1) 부트스트랩의 이미지들은 해당 요소에 클래스명 .img-responsive 를 사용하여 반응현
+        2) img-responsive 클래스명에는 max-width:100%;, height:auto, display: block;
+        3) img-responsive 를 사용한 이미지를 가운데 두기위해서, .text-center 대신 center-block을 사용
+        4) img 태그를 사용하지 않고 css를 활용하여 이미지를 넣으려면 div에 .img-responsive 클래스명을 사용
+           css에서 background-image, height와 background-size 설정을 한다.
+     -->
+    
     <div class="container">
         <h1>그리드 시스템을 활용한 이미지</h1>
         <div class="row">
