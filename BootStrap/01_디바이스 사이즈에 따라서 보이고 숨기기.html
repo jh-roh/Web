@@ -20,6 +20,18 @@
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
     <style>
+      .img {
+        background-image: url(img/cabin.png);
+        width: 600px;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+      }
+
+      .bo {
+        border: 1px solid red;
+      }
     </style>    
   </head>
   <body>
@@ -28,7 +40,48 @@
     <!-- Screen Reader기만 읽어준다.  -->
     <!-- Display block으로 만들어준다. -->
     <span class="bg-danger">인라인요소</span>
-    <div class="img"></div>
+    <div class="img text-hide">cabin</div>
+
+    <div class="col-xs-12 bg-info bo visible-xs">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 스마트폰 사이즈 기기에서만 보임</p>
+    </div>
+    <div class="col-xs-12 bg-danger bo visible-sm">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 태블릿 사이즈 기기에서만 보임</p>
+    </div>
+    <div class="col-xs-12 bg-warning bo visible-md">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 작은 모니터 사이즈 기기에서만 보임</p>
+    </div>
+    <div class="col-xs-12 bg-primary bo visible-lg">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 큰 모니터 사이즈 기기에서만 보임</p>
+    </div>
+
+
+    <br><br>
+    <h3>visible hidden 클래스 사용</h3>
+
+    <div class="col-xs-12 bg-info bo hidden-xs">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 스마트폰 사이즈 기기에서만 숨김</p>
+    </div>
+    <div class="col-xs-12 bg-danger bo hidden-sm">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 태블릿 사이즈 기기에서만 숨김</p>
+    </div>
+    <div class="col-xs-12 bg-warning bo hidden-md">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 작은 모니터 사이즈 기기에서만 숨김</p>
+    </div>
+    <div class="col-xs-12 bg-primary bo hidden-lg">
+      디바이스 사이즈에서 보이고 숨기는 컨텐츠
+      <p>해당 하는 요소는 큰 모니터 사이즈 기기에서만 숨김</p>
+    </div>
+
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
