@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>04_점보트론(Jumbotron).html</title>
+    <title>01_다양한 컴포넌트(글리피콘, 드랍다운, 네비게이션)</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -19,32 +19,186 @@
       <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-    
+    <style>
+        /* span{
+            background-color: yellow;
+        } */
+
+        /*
+          div{
+              background-color: lightblue;
+
+          }
+        */
+
+          .navbar-brand img{
+            width: 100px;
+          }
+
+          .navbar-text{
+            margin-right: 100px;
+          }
+    </style>    
   </head>
   <body>
-    <!-- 사이트에서 유일하게 중요한 컨텐츠를 표시할 때 점보트론을 사용한다. -->
-<!-- A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site. -->
-<div>
-  <h1>Hello, world!</h1>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sit consequuntur dicta modi doloremque dolorem autem neque facilis doloribus, totam laudantium error commodi nisi provident quos harum architecto praesentium maiores?</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</div>
-  <div class="jumbotron">
-    <h1>Hello, world!</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sit consequuntur dicta modi doloremque dolorem autem neque facilis doloribus, totam laudantium error commodi nisi provident quos harum architecto praesentium maiores?</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+  <!-- 글리피콘 -->
+   <span>인라인 요소인 span</span>
+   <div>블록요소인 div</div>
+   <span class="glyphicon glyphicon-align-justify"></span>
+   <button type="button" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+  </button>
+
+  <!-- 드랍다운 컴포넌트 -->
+
+
+  <h1>드랍다운 컴포넌트</h1>
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <!-- dropdown 콤포넌트 ul태그로 사용 -->
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li class="dropdown-header">사이트 주소</li>
+      <li><a href="https://www.naver.com">네이버</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li><a href="#">Separated link</a></li>
+      <li role="separator" class="divider"></li>
+      <li class="dropdown-header">커피메뉴</li>
+      <li><a href="#">아메리카노</a></li>
+      <li><a href="#">카푸치노</a></li>
+      <li><a href="#">카페라떼</a></li>
+    </ul>
   </div>
 
+  <ul class="nav nav-tabs nav-justified">
+    <li role="presentation" >
+      <a href="#">Home</a>
+    </li>
+    <li role="presentation" class="active"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
 
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Hello, world!</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sit consequuntur dicta modi doloremque dolorem autem neque facilis doloribus, totam laudantium error commodi nisi provident quos harum architecto praesentium maiores?</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  <h2>네비게이션 알약형</h2>
+
+  <ul class="nav nav-pills nav-justified">
+    <li role="presentation" >
+      <a href="#">Home</a>
+    </li>
+    <li role="presentation" class="active"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
+
+
+  <h2>네비게이션 수직 알약형</h2>
+  <ul class="nav nav-pills nav-stacked">
+    <li role="presentation" >
+      <a href="#">Home</a>
+    </li>
+    <li role="presentation" class="active"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul>
+
+  <!-- <h2>네비게이션 수직 탭형</h2>
+  <ul class="nav nav-tabs nav-stacked">
+    <li role="presentation" >
+      <a href="#">Home</a>
+    </li>
+    <li role="presentation" class="active"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+  </ul> -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+  </ul>
+
+  <h2>w3school.com에서 실제 구현되는 탭형의 예제코드</h2>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Home</h3>
+      <p>Some content.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Some content in menu 1.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Some content in menu 2.</p>
     </div>
   </div>
-    
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" src="../img/logo.jpg" >
+        </a>
+        <p class="navbar-text navbar-link">9pixcel studio는 최고의 서비스를 제공합니다.</p>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li> -->
+        </ul>
+        <!-- <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul> -->
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
   </body>
