@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>02_그리드시스템을 활용한 이미지 레이아웃</title>
+    <!-- 
+      폼태그 스타일의 중요포인트!!
+
+      1) 입력창에 스타일을 주려면 form-group 클래스명에 has-스타일이름 클래스 명을 넣어준다
+      2) 레이블 태그에 class="control-lable" 을 부여하면 form-group이 가지고 있는 스타일을 따라간다.
+      3) 입력칸에 아이콘을 붙이려면 input-group으로 감싸고 그안에 input-group-addon이라는 클래명을 활용
+      4) red 계열 스타일을 주려면 클래스명 has-error를 준다.
+     -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+       
+    </style>    
+  </head>
+  <body>
+    <!-- 
+      1. 컨텐츠를 감싸는 약간의 기본 테두리와 패딩을 가지고 있는 스타일을 패널이라고 하며, 컨텐츠를 감싸는 div에는 panel-body를 주고
+      그것을 깜싸는 부모 div를 만들고 .panel과 .panel-default를 준다.
+
+      2. 태그에 오목한 효과를 주는 well 스타일을 주려면 컨텐츠를 감싸는 div에 .well을 부여한다.
+      3. 부트스트랩에서는 반응형 동영상을 만들 수 있도록 자바스크립트를 활용하는데 iframe 태그에 .embed-responsive-item 을 주고
+      그것을 감싸는 div에 .embed-responsive를 준 후 동영상 화면비율에 따라 비율이 16:9이면 embed-responsive-16by9를 주고
+      화면비율이 4:3이면 embed-responsive-4by3을 옆에 추가하면 간단하게 반응형 동영상을 만들 수 있음.
+
+
+     -->
+    <h2>패널요소</h2>
+    <h3>기본 패널 스타일</h3>
+    <div class="panel panel-default">
+        <div class="panel-body">
+          Basic panel example
+        </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+    <h3>다양한 스타일의 패널</h3>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+    <div class="panel panel-success">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">Panel heading without title</div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+    <h2>태그에 오목한 효과를 주는 웹</h2>
+    <div class="well">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat doloremque quos reprehenderit perferendis voluptate ipsam.</div>
+    <div class="well well-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat doloremque quos reprehenderit perferendis voluptate ipsam.</div>
+    <div class="well well-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat doloremque quos reprehenderit perferendis voluptate ipsam.</div>
+
+
+    <br><br><br><br><br>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>
