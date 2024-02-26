@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 잡기</title>
+    <style>
+
+
+        /*================================ Header.css ==================================*/
+        header {
+            background-color: lightgray;
+
+            height: 215px;
+        }
+
+        .link-text{
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        /*==============================================================================*/
+
+
+        main {
+            background: #f2f4f7;
+            min-height: 700px;
+        }
+
+        footer {
+            background-color: darkgray;
+            height: 310px;
+        }
+    </style>
+</head>
+<body>
+    <!-- header, main, footer 세가지 영역으로 나뉨 -->
+    <!-- header: 웹페이지의 최상단 부분, 주로 사이트의 이름, 검색창, 네비게이션 등의 내용이 포함 
+         main : 본문 영역. 일반적으로 body 내에서 1개만 존재. header와 footer를 제외한 모든 내용의 부모 요소
+         footer: 웹 페이지의 최하단 부분 주로 상호명, 연락처, 개인정보처리방침등의 내용이 포함
+    -->
+
+    <header>
+        <div class="links">
+            <a href="/" class="link-text">네이버를 시작페이지로</a>
+            <a href="/" class="link-text">쥬니어 네이버</a>
+            <a href="/" class="link-text">해피빈</a>
+        </div>    
+
+    </header>
+    
+    
+    
+    
+    <main>메인</main>
+    <footer>하단</footer>
+
+    <!-- 랜드마크 요소를 사용
+    웹 접근성과 SEO(Search Engine Optimization, 검색 엔진 최적화) 
+
+    랜드마크 요소(header, main, footer, section, nav)
+-->
+<!-- 
+    <div id="header" role="banner">상단</div>
+    <div id="main" role="main">메인</div>
+    <div id="footer" role="contentinfo">하단</div> -->
+
+
+
+
+
+</body>
+</html>
