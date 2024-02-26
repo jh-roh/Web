@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>01_모달창의 기본활용법</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- 
+      1. 버튼을 클릭하면 컨텐츠 창이 뜨면서 배경화면이 비활성화되고 컨텐츠 창을 닫으면 원래대로 돌아가는 형태를 모달
+      2. .modal-dialog에 .modal.lg 클래스를 추가하면 상단처럼 큰 너비의 모달창이 구현 .modal-sm클래스를 추가하면 하단처럼 작은 너비 모달창구현
+      3. 기본적으로 모달창은 페이드인되면서 나타나고 페이드아웃되면서 없어지는데 페이드효과를 없애려면 .fade 클래스명을 제거
+      4. 각각의 버튼 마다 뜨는 모달창의 컨텐츠의 내용과 일치하려면 button 태그의 data-target의 속성값과 div.modal의 id값을 일치
+     -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    스타벅스 이벤트 참여
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          일년에 한번 열리는 축제에 참여하고 이벤트에 참가하여 무료 커피 쿠폰을 받아가세요.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">다음에 참여할게요</button>
+          <a type="button" class="btn btn-primary" href="https://www.starbucks.co.kr/index.do" target="_blank">지금 바로 참여할게요</a>   
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>스타벅스 홈페이지에 오신것을 환영합니다.</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat possimus quasi rerum recusandae ipsa consequatur consequuntur ducimus similique repudiandae ut nisi, sint mollitia provident labore explicabo qui cumque. Error, veniam!</p>
+  </section>
+
+
+
+
+
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+   <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
