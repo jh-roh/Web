@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navBar MainLayout Test</title>
+
+
+
+
+    <link href="./css/devextreme/Charset.css" rel="stylesheet" />
+    <link href="./css/devextreme/bootstrap.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./css/site.css"> -->
+
+    <link href="./css/devextreme/dx.common.css" rel="stylesheet" />
+    <link href="./css/devextreme/dx.light.css" rel="stylesheet" />
+
+    <script src="./js/devextreme/jquery.js"></script>
+
+    <script src="./js/devextreme/bootstrap.js"></script>
+
+    <script src="./js/devextreme/cldr.js"></script>
+    <script src="./js/devextreme/cldr/event.js"></script>
+    <script src="./js/devextreme/cldr/supplemental.js"></script>
+    <script src="./js/devextreme/cldr/unresolved.js"></script>
+
+    <script src="./js/devextreme/globalize.js"></script>
+    <script src="./js/devextreme/globalize/message.js"></script>
+    <script src="./js/devextreme/globalize/number.js"></script>
+    <script src="./js/devextreme/globalize/currency.js"></script>
+    <script src="./js/devextreme/globalize/date.js"></script>
+
+    <script src="./js/devextreme/dx.all.js"></script>
+    <script src="./js/devextreme/vectormap-data/world.js"></script>
+    <script src="./js/devextreme/aspnet/dx.aspnet.data.js"></script>
+    <script src="./js/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="./css/custom_sidebar.css"> -->
+    <style>
+
+        * {
+            margin:0; padding:0;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: stretch;
+            background: #DCE6EE;
+            height: 1078px;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            
+            background: #164482;
+            color: #fff;
+            transition: all 0.3s;
+            
+        }
+        #sidebar > ul {
+            min-height: calc(100% - 96px - 120px);
+        }
+
+        #sidebar > div {
+            width:260px;
+            height:96px;
+        }
+
+        #sidebar > div > a{
+            position: absolute;
+            top: 35px;
+            left: 26px;
+        }
+
+        #sidebar ul > li:nth-child(1) {
+            display: none;
+        }
+
+        #sidebar > div > a > #intipharm-Logo {
+            width:116px;
+            height:21px;
+        }
+
+        #sidebar > div > #sidebar-close {
+            position: absolute;
+            top: 37px;
+            left: 220px;
+            cursor: pointer;
+        }
+
+        #sidebar > div:nth-child(3) > #jvm-Logo {
+            position: relative;
+            margin-left: 81px;
+        }
+        
+        #sidebar > ul > li {
+            width: 260px;
+            height: 62px;
+        }
+   
+        #sidebar > ul > li > a {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        #sidebar > ul > li > a:hover {
+            background-color: #DCE6EE; 
+            color: #081E50;
+        }
+        #sidebar > ul > li > a > img {
+            margin-left: 3px;
+            width: 25px;
+            height: 23px;
+            background-repeat: no-repeat;
+        }
+
+        #sidebar > ul > li > a > span{
+            margin-left: 23px;
+            margin-top: -3px;
+            font-weight: bold;
+        }
+        
+        #sidebar > ul > li > a > #mainMenu {
+            background-image: url(./images/Icon_home.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #mainMenu {
+            background-image: url(./images/Icon_home_active.svg);
+        }
+
+        #sidebar > ul > li > a > #prescriptionMenu {
+            background-image: url(./images/Icon_prescription.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #prescriptionMenu {
+            background-image: url(./images/Icon_prescription_active.svg);
+        }
+
+        
+        #sidebar > ul > li > a > #itemHistoryMenu {
+            background-image: url(./images/Icon_itemHistory.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #itemHistoryMenu {
+            background-image: url(./images/Icon_itemHistory_active.svg);
+        }
+
+        #sidebar > ul > li > a > #itemUsageMenu {
+            background-image: url(./images/Icon_itemUsage.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #itemUsageMenu {
+            background-image: url(./images/Icon_itemUsage_active.svg);
+        }
+
+        #sidebar > ul > li > a > #itemInventoryMenu {
+            background-image: url(./images/Icon_inventory.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #itemInventoryMenu {
+            background-image: url(./images/Icon_inventory_active.svg);
+        }
+
+        #sidebar > ul > li > a > #LabelPrintMenu {
+            background-image: url(./images/Icon_LabelPrint.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #LabelPrintMenu {
+            background-image: url(./images/Icon_LabelPrint_active.svg);
+        }
+
+        #sidebar > ul > li > a > #VerbalPrescriptionMenu {
+            background-image: url(./images/Icon_VerbalPrescription.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #VerbalPrescriptionMenu {
+            background-image: url(./images/Icon_VerbalPrescription_active.svg);
+        }
+
+        #sidebar > ul > li > a > #RecoveryHistoryMenu {
+            background-image: url(./images/Icon_RecoveryHistory.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #RecoveryHistoryMenu {
+            background-image: url(./images/Icon_RecoveryHistory_active.svg);
+        }
+
+        #sidebar > ul > li > a > #UserActionMenu {
+            background-image: url(./images/Icon_UserAction.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #UserActionMenu {
+            background-image: url(./images/Icon_UserAction_active.svg);
+        }
+
+        #sidebar > ul > li > a > #TemperatureHumidityMenu {
+            background-image: url(./images/Icon_Temperature.svg);
+        }
+
+        #sidebar > ul > li > a:hover > #TemperatureHumidityMenu {
+            background-image: url(./images/Icon_Temperature_active.svg);
+        }
+
+        
+
+        #content {
+            width: calc(100% - 250px);
+            min-height: 100vh;
+            transition: all 0.3s;
+            background: #DCE6EE;
+        }
+
+
+        @media (max-width: 768px) {
+            #sidebar {
+                min-width: 62px;
+                max-width: 62px;
+                text-align: center;
+                margin-left: 0 !important;
+            }
+
+            #sidebar div {
+                display: none;
+            }
+
+            #sidebar ul > li:nth-child(1) {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div>
+                <a href="#">
+                    <img id="intipharm-Logo"  src="./images/logo.svg" />
+                </a>
+
+                <img id="sidebar-close" src="./images/sidebar_close.svg" />
+            </div>
+
+            <ul class="list-unstyled">
+                <li>
+                    <a href="#">
+                        <img src="./images/sidebar_open.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="mainMenu"  src="./images/Icon_Temp.svg"/>
+                        <span>테스트1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="prescriptionMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="itemHistoryMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="itemUsageMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="LabelPrintMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="VerbalPrescriptionMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트6</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="RecoveryHistoryMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트7</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="TemperatureHumidityMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트8</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img id="UserActionMenu" src="./images/Icon_Temp.svg" />
+                        <span>테스트9</span>
+                    </a>
+                </li>
+            </ul>
+            
+                
+            <div>
+                <img id="jvm-Logo" src="./images/logo.svg" />
+            </div>
+        </nav>
+        <div id="content">
+
+
+
+        </div>
+
+    </div>
+</body>
+</html>
