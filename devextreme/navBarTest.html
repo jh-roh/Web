@@ -78,7 +78,7 @@
             display: none;
         }
 
-        #sidebar > div > a > #intipharm-Logo {
+        #sidebar > div > a > #Logo1 {
             width:116px;
             height:21px;
         }
@@ -90,7 +90,7 @@
             cursor: pointer;
         }
 
-        #sidebar > div:nth-child(3) > #jvm-Logo {
+        #sidebar > div:nth-child(3) > #Logo2 {
             position: relative;
             margin-left: 81px;
         }
@@ -215,23 +215,13 @@
         }
 
 
-        @media (max-width: 768px) {
-            #sidebar {
-                min-width: 62px;
-                max-width: 62px;
-                text-align: center;
-                margin-left: 0 !important;
-            }
+        /* @media (max-width: 768px) {
+            
+            
 
-            #sidebar div {
-                display: none;
-            }
+            
 
-            #sidebar ul > li:nth-child(1) {
-                display: none;
-            }
-
-        }
+        } */
     </style>
 </head>
 <body>
@@ -239,14 +229,13 @@
         <nav id="sidebar">
             <div>
                 <a href="#">
-                    <img id="test-Logo"  src="./images/logo.svg" />
+                    <img id="Logo1"  src="./images/logo.svg" />
                 </a>
-
-                <img id="sidebar-close" src="./images/sidebar_close.svg" />
+                <img id="sidebar-close" src="./images/sidebar_close.svg" onclick="handlerSidebarCloseClick()" />
             </div>
 
             <ul class="list-unstyled">
-                <li>
+                <li onclick="handlerSidebarOpenClick()">
                     <a href="#">
                         <img src="./images/sidebar_open.svg" />
                     </a>
@@ -309,7 +298,7 @@
             
                 
             <div>
-                <img id="jvm-Logo" src="./images/logo.svg" />
+                <img id="Logo2" src="./images/logo.svg" />
             </div>
         </nav>
         <div id="content">
@@ -319,5 +308,104 @@
         </div>
 
     </div>
+
+    <script>
+        
+        let isSideBarClicked = false;
+        let mobileSizeWidth = 768;
+
+        function sidebarOpen() {
+            var sidebar = document.getElementById('sidebar');
+            var sidebarDivs = document.querySelectorAll('#sidebar div');
+            var firstListItem = document.querySelector('#sidebar ul > li:nth-child(1)');
+
+            sidebar.style.minWidth = '250px';
+            sidebar.style.maxWidth = '250px';
+
+            sidebarDivs.forEach(function(div) {
+                div.style.display = 'block';
+            });
+
+            if (firstListItem) {
+                firstListItem.style.display = 'none';
+            }
+        }
+
+        function sidebarClose(){
+            var sidebar = document.getElementById('sidebar');
+            var sidebarDivs = document.querySelectorAll('#sidebar div');
+            var firstListItem = document.querySelector('#sidebar ul > li:nth-child(1)');
+            // 각 div에 대해 display 속성을 변경하여 숨김
+                // #sidebar div {
+                //     display: none;
+                // }
+                sidebarDivs.forEach(function(div) {
+                    div.style.display = 'none';
+                });
+
+                //#sidebar {
+                //     min-width: 62px;
+                //     max-width: 62px;
+                //     text-align: center;
+                //     margin-left: 0 !important;
+                // }
+                // 스타일 속성을 직접 설정
+                sidebar.style.minWidth = '62px';
+                sidebar.style.maxWidth = '62px';
+
+                // #sidebar ul > li:nth-child(1) {
+                //     display: none;
+                // }
+                // 스타일 속성을 직접 설정
+                if (firstListItem) {
+                    firstListItem.style.display = 'block';
+                }
+        }
+
+        function handlerSidebarOpenClick() {
+            let windowWidth = window.innerWidth;
+            if(windowWidth > mobileSizeWidth)
+            {
+                sidebarOpen();
+                isSideBarClicked = false;
+
+                console.log('sidebar Open');
+            }
+            else{
+                window.alert('모바일 사이즈에서는 사용할 수 없습니다.')
+            }
+
+        }
+        function handlerSidebarCloseClick() {
+            let windowWidth = window.innerWidth;
+            if(windowWidth > mobileSizeWidth)
+            {
+                sidebarClose();
+                isSideBarClicked = true;
+
+                console.log('sidebar Close');
+            }
+
+        }
+
+        function handlerResize(){
+            let windowWidth = window.innerWidth;
+           
+            if(windowWidth <= mobileSizeWidth)
+            {
+                sidebarClose();
+            }
+            else
+            {
+                if(isSideBarClicked == false)
+                {
+                    sidebarOpen();
+                }
+            }
+
+        }
+    
+        window.addEventListener('resize', handlerResize);
+    </script>
 </body>
 </html>
