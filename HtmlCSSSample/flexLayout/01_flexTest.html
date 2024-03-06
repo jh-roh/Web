@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_flexTest</title>
+    <style type="text/css">
+        .container {
+            background: beige;
+            height: 100vh;
+            display: flex;
+
+
+/*             
+            flex-direction: column;
+            flex-direction: row;
+            flex-direction: row-reverse;
+
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse;
+        
+            flex-flow: column nowrap;
+
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+
+            justify-content: space-around;
+            justify-content: space-evenly;
+            justify-content: space-between;
+            align-items: center;
+
+            align-items: baseline;
+
+            align-content: center; */
+        }
+
+        .item {
+            height: 40px;
+            width: 40px;
+            border: 1px solid black;
+        }
+        .item1 {
+            background: yellow;
+            /* padding: 20px; */
+            /* order: 2; */
+            flex-grow: 1;
+
+        }
+        .item2 {
+            background: cadetblue;
+            /* order: 1; */
+
+        }
+        .item3 {
+            background: darkblue;
+            /* order: 3; */
+
+        }
+        /* .item4 {
+            background: darkcyan;
+        }
+        .item5 {
+            background: firebrick;
+        }
+        .item6 {
+            background: gainsboro;
+        }
+        .item7 {
+            background: honeydew;
+        }
+        .item8 {
+            background: indianred;
+        }
+        .item9 {
+            background: khaki;
+        }
+        .item10 {
+            background: lawngreen;
+        } */
+
+        /* Color Tool */
+
+        /* 100% vs 100vh */
+    </style>
+</head>
+
+
+<!-- A Complete Guid to FlexBox 사이트에서 확인 -->
+<!-- Can I Use 사이트나 MDN 사이트 참조 -->
+<body>
+    <!-- div.container>div.item.item${$}*10 -->
+    <!-- <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+    </div> -->
+
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+    <!-- container에 적용되는 속성 -->
+    <!-- 
+        display
+        flex-direction
+        flex-wrap
+        flex-flow
+        justify-content
+        align-items
+        align-content
+     -->
+
+     <!-- item에 지정되는 속성 order, flex-grow, flex-shrink,flex, align-self -->
+
+
+    <!-- <div style="display:flex;">
+        <div style="width:100px; flex-shrink:0; background-color:deeppink">왼쪽</div>
+        <div style="flex-grow:1; background-color:hotpink;">중간</div>
+        <div style="width:100px; flex-shrink:0; background-color:lightpink;">오른쪽</div>
+    </div> -->
+</body>
+</html>
