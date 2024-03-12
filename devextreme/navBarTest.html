@@ -10,7 +10,7 @@
 
     <link href="./css/devextreme/Charset.css" rel="stylesheet" />
     <link href="./css/devextreme/bootstrap.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="./css/site.css"> -->
+
 
     <link href="./css/devextreme/dx.common.css" rel="stylesheet" />
     <link href="./css/devextreme/dx.light.css" rel="stylesheet" />
@@ -37,247 +37,9 @@
 
 
     <!-- <link rel="stylesheet" href="./css/custom_sidebar.css"> -->
+
+    <link rel="stylesheet" href="./navBarTest.css">
     <style>
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    /* ---------------------------------------------------
-        SIDEBAR STYLE
-    ----------------------------------------------------- */
-    .wrapper {
-        display: flex;
-        align-items: stretch;
-        background: #DCE6EE;
-        height: 1078px;
-    }
-
-    #sidebar {
-        min-width: 250px;
-        max-width: 250px;
-        background: #164482;
-        color: #fff;
-        transition: all 0.3s;
-    }
-
-
-    #sidebar.sideBar-minsize {
-        min-width: 62px;
-        max-width: 62px;
-    }
-
-
-
-    #sidebar > ul {
-        min-height: calc(100% - 96px - 120px);
-    }
-
-    #sidebar > div {
-        width: 260px;
-        height: 96px;
-    }
-
-    #sidebar div.show {
-        display: block;
-    }
-    #sidebar div.collapse {
-        display: none;
-    }
-
-
-    #sidebar > div > a {
-        position: absolute;
-        top: 35px;
-        left: 26px;
-    }
-
-    /*#sidebar ul > li:nth-child(1) {
-        display: none;
-    }*/
-
-    #intipharm-Logo {
-        width: 116px;
-        height: 21px;
-    }
-
-    /*#sidebar > div > a > #intipharm-Logo {
-        width: 116px;
-        height: 21px;
-    }*/
-    #sidebar-open.show{
-        display:block;
-    }
-
-    #sidebar-open.collapse {
-        display: none;
-    }
-
-    /*#sidebar > div > #sidebar-close {
-        position: absolute;
-        top: 37px;
-        left: 220px;
-        cursor: pointer;
-    }*/
-
-    #sidebar-close {
-        position: absolute;
-        top: 37px;
-        left: 220px;
-        cursor: pointer;
-    }
-
-    /*#sidebar > div:nth-child(3) > #JVM-Logo {
-        position: relative;
-        margin-left: 81px;
-    }*/
-
-    #JVM-Logo {
-        position: relative;
-        margin-left: 81px;
-    }
-
-    #sidebar > ul > li {
-        width: 260px;
-        height: 62px;
-    }
-
-    #sidebar > ul > li > a {
-        display: flex;
-        text-decoration: none;
-        color: white;
-        padding: 15px;
-        font-size: 18px;
-    }
-
-    #sidebar > ul > li.active,
-    #sidebar > ul > li.active > a > span,
-    #sidebar > ul > li > a:hover {
-        background-color: #DCE6EE;
-        color: #081E50;
-    }
-
-    #sidebar > ul > li > a > img {
-        margin-left: 3px;
-        width: 25px;
-        height: 23px;
-        background-repeat: no-repeat;
-    }
-
-    #sidebar > ul > li > a > span {
-        margin-left: 23px;
-        margin-top: -3px;
-        font-weight: bold;
-    }
-            
-    #sidebar > ul > li > a > #mainMenu {
-        background-image: url(./images//Icon_home.svg);
-    }
-
-    #sidebar > ul > li.active > a > #mainMenu,
-    #sidebar > ul > li > a:hover > #mainMenu {
-        background-image: url(./images//Icon_home_active.svg);
-    }
-
-    #sidebar > ul > li > a > #prescriptionMenu {
-        background-image: url(./images//Icon_prescription.svg);
-    }
-
-    #sidebar > ul > li.active > a > #prescriptionMenu,
-    #sidebar > ul > li > a:hover > #prescriptionMenu {
-        background-image: url(./images//Icon_prescription_active.svg);
-    }
-
-
-    #sidebar > ul > li > a > #itemHistoryMenu {
-        background-image: url(./images//Icon_itemHistory.svg);
-    }
-
-    #sidebar > ul > li.active > a > #itemHistoryMenu,
-    #sidebar > ul > li > a:hover > #itemHistoryMenu {
-        background-image: url(./images//Icon_itemHistory_active.svg);
-    }
-
-    #sidebar > ul > li > a > #itemUsageMenu {
-        background-image: url(./images//Icon_itemUsage.svg);
-    }
-
-    #sidebar > ul > li.active > a > #itemUsageMenu,
-    #sidebar > ul > li > a:hover > #itemUsageMenu {
-        background-image: url(./images//Icon_itemUsage_active.svg);
-    }
-
-    #sidebar > ul > li > a > #itemInventoryMenu {
-        background-image: url(./images//Icon_inventory.svg);
-    }
-
-    #sidebar > ul > li.active > a > #itemInventoryMenu,
-    #sidebar > ul > li > a:hover > #itemInventoryMenu {
-        background-image: url(./images//Icon_inventory_active.svg);
-    }
-
-    #sidebar > ul > li > a > #LabelPrintMenu {
-        background-image: url(./images//Icon_LabelPrint.svg);
-    }
-
-    #sidebar > ul > li.active > a > #LabelPrintMenu,
-    #sidebar > ul > li > a:hover > #LabelPrintMenu {
-        background-image: url(./images//Icon_LabelPrint_active.svg);
-    }
-
-    #sidebar > ul > li > a > #VerbalPrescriptionMenu {
-        background-image: url(./images//Icon_VerbalPrescription.svg);
-    }
-
-    #sidebar > ul > li.active > a > #VerbalPrescriptionMenu,
-    #sidebar > ul > li > a:hover > #VerbalPrescriptionMenu {
-        background-image: url(./images//Icon_VerbalPrescription_active.svg);
-    }
-
-    #sidebar > ul > li > a > #RecoveryHistoryMenu {
-        background-image: url(./images//Icon_RecoveryHistory.svg);
-    }
-
-    #sidebar > ul > li.active > a > #RecoveryHistoryMenu,
-    #sidebar > ul > li > a:hover > #RecoveryHistoryMenu {
-        background-image: url(./images//Icon_RecoveryHistory_active.svg);
-    }
-
-    #sidebar > ul > li > a > #UserActionMenu {
-        background-image: url(./images//Icon_UserAction.svg);
-    }
-
-    #sidebar > ul > li.active > a > #UserActionMenu,
-    #sidebar > ul > li > a:hover > #UserActionMenu {
-        background-image: url(./images//Icon_UserAction_active.svg);
-    }
-
-    #sidebar > ul > li > a > #TemperatureHumidityMenu {
-        background-image: url(./images//Icon_Temperature.svg);
-    }
-
-    #sidebar > ul > li.active > a > #TemperatureHumidityMenu,
-    #sidebar > ul > li > a:hover > #TemperatureHumidityMenu {
-        background-image: url(./images//Icon_Temperature_active.svg);
-    }
-
-    #content {
-        width: calc(100% - 250px);
-        min-height: 100vh;
-        transition: all 0.3s;
-        background: #DCE6EE;
-    }
-
-    #content.minimize {
-        width: calc(100% - 62px);
-    }
-
-    #content > .container-fluid > div:nth-child(1) {
-        background-color:red; 
-        margin:0px 10px; 
-        height:96px;
-    }
 
     </style>
 </head>
@@ -352,28 +114,70 @@
                     </a>
                 </li>
             </ul>
-            
-                
             <div>
                 <img id="Logo2" src="./images/logo.svg" />
             </div>
         </nav>
         <div id="content">
-            <div class="container-fluid">
-                <div style="display:flex;">
-                    <div style="width:100px; flex-shrink:0; background-color:deeppink">왼쪽</div>
-                    <div style="flex-grow:1; background-color:hotpink;">중간</div>
-                    <div style="width:100px; flex-shrink:0; background-color:lightpink;">오른쪽</div>
-                </div>
-                <div style="margin:0px 10px;">
-                    @RenderBody()
-                </div>
+            <div style="display:flex;">
+                <div style="width:300px;  background-color:deeppink">왼쪽</div>
+                <div style="flex-grow:1; background-color:hotpink;">중간</div>
+                <div style="width:300px;  background-color:lightpink;">오른쪽</div>
             </div>
+            <div class="bg-light text-dark border rounded overflow-hidden shadow-sm">
+      
+                <!-- 데스크탑 버전 -->
+                <div id="container-desktop"  >
+                    <div class="search" >테스트 1</div>
+                    <div class="periodSearch periodSearch-three">1234</div>
+                    <div class="periodSearch periodSearch-six">4567</div>
+                    <div class="periodSearch periodSearch-year">891011</div>
+
+                    <div class="search" >테스트 2</div>
+                    <div class="startDateBox"></div>
+                    <div class="dateBox-Tilde">~</div>
+                    <div class="endDateBox"></div>
+                    <div class="searchTextBox" ></div>
+                    <div class="searchString" >검색</div>
+                </div>
 
 
+                <!-- 모바일 버전 -->
+                <div id="container-mobile" class="container-fluid">
+                    <div class="row">
+                        <div class="search" >테스트 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="periodSearch col-xs-4 periodSearch-three" >1234</div>
+                        <div class="periodSearch col-xs-4 periodSearch-six" >4567</div>
+                        <div class="periodSearch col-xs-4 periodSearch-year" >891011</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="search">테스트 2</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="startDateBox"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="endDateBox" ></div>
+                    </div>
+                    <div class="row">
+                        <div class="searchTextBox"  ></div>
+                    </div>
+                    <div class="row">
+                        <div class="searchString">검색</div>
+                    </div>
+                </div>
+                <div style="margin:0px 30px;" id="gridContainer"></div>
+            </div>
+            
+        
         </div>
-
     </div>
+
 
     <script type="text/javascript">
 
@@ -466,10 +270,85 @@
             }
 
         }
+
+        function reportControlLoad() {
+            const nowDate = new Date();
+            $('.periodSearch-three').dxButton({
+                stylingMode: 'contained',
+                type: 'default',
+            });
+            $('.periodSearch-six').dxButton({
+                stylingMode: 'contained',
+                type: 'default',
+            });
+
+            $('.periodSearch-year').dxButton({
+                stylingMode: 'contained',
+                type: 'default',
+            });
+
+            $('.startDateBox').dxDateBox({
+              value: nowDate,
+              displayFormat: 'yyyy-MM-dd',
+              stylingMode: "underlined",
+            });
+
+            $('.endDateBox').dxDateBox({
+              value: nowDate,
+              displayFormat: 'yyyy-MM-dd',
+              stylingMode: "underlined",
+            });
+
+            $('.searchTextBox').dxTextBox({
+                value: '',
+            });
+
+            $('.searchString').dxButton({
+                stylingMode: 'contained',
+                type: 'default',
+            });
+
+
+
+            // $('#container-mobile > .row > .periodSearch-three').dxButton({
+            //     stylingMode: 'contained',
+            //     type: 'default',
+            // });
+            // $('#container-mobile > .row > .periodSearch-six').dxButton({
+            //     stylingMode: 'contained',
+            //     type: 'default',
+            // });
+
+            // $('#container-mobile > .row > .periodSearch-year').dxButton({
+            //     stylingMode: 'contained',
+            //     type: 'default',
+            // });
+
+            // $('#container-mobile > .row > .startDateBox').dxDateBox({
+            //   value: nowDate,
+            //   displayFormat: 'yyyy-MM-dd',
+            //   stylingMode: "underlined",
+            // });
+
+            // $('#container-mobile > .row > .endDateBox').dxDateBox({
+            //   value: nowDate,
+            //   displayFormat: 'yyyy-MM-dd',
+            //   stylingMode: "underlined",
+            // });
+
+            // $('#container-mobile > .row > .searchTextBox').dxTextBox({
+            //     value: '',
+            // });
+
+            // $('#container-mobile > .row > .searchString').dxButton({
+            //     stylingMode: 'contained',
+            //     type: 'default',
+            // });
+            
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
-
             var currentPageUrl = window.location.href;
-
             // #sidebar 태그 안의 li 태그들의 a 태그에서 현재 페이지의 URL과 href 값이 같은지 체크
             var navLinks = document.querySelectorAll('#sidebar ul li a');
        
@@ -494,7 +373,7 @@
             });
 
             handlerResize();
-
+            reportControlLoad();
             window.addEventListener('resize', handlerResize);
         });
     </script>

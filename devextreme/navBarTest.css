@@ -1,0 +1,337 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    background: #DCE6EE;
+    height: 1078px;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #164482;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+#sidebar.sideBar-minsize {
+    min-width: 62px;
+    max-width: 62px;
+}
+
+
+
+#sidebar > ul {
+    min-height: calc(100% - 96px - 120px);
+}
+
+#sidebar > div {
+    width: 260px;
+    height: 96px;
+}
+
+#sidebar div.show {
+    display: block;
+}
+#sidebar div.collapse {
+    display: none;
+}
+
+
+#sidebar > div > a {
+    position: absolute;
+    top: 35px;
+    left: 26px;
+}
+
+/*#sidebar ul > li:nth-child(1) {
+    display: none;
+}*/
+
+#intipharm-Logo {
+    width: 116px;
+    height: 21px;
+}
+
+/*#sidebar > div > a > #intipharm-Logo {
+    width: 116px;
+    height: 21px;
+}*/
+#sidebar-open.show{
+    display:block;
+}
+
+#sidebar-open.collapse {
+    display: none;
+}
+
+/*#sidebar > div > #sidebar-close {
+    position: absolute;
+    top: 37px;
+    left: 220px;
+    cursor: pointer;
+}*/
+
+#sidebar-close {
+    position: absolute;
+    top: 37px;
+    left: 220px;
+    cursor: pointer;
+}
+
+/*#sidebar > div:nth-child(3) > #JVM-Logo {
+    position: relative;
+    margin-left: 81px;
+}*/
+
+#JVM-Logo {
+    position: relative;
+    margin-left: 81px;
+}
+
+#sidebar > ul > li {
+    width: 260px;
+    height: 62px;
+}
+
+#sidebar > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#sidebar > ul > li.active,
+#sidebar > ul > li.active > a > span,
+#sidebar > ul > li > a:hover {
+    background-color: #DCE6EE;
+    color: #081E50;
+}
+
+#sidebar > ul > li > a > img {
+    margin-left: 3px;
+    width: 25px;
+    height: 23px;
+    background-repeat: no-repeat;
+}
+
+#sidebar > ul > li > a > span {
+    margin-left: 23px;
+    margin-top: -3px;
+    font-weight: bold;
+}
+        
+#sidebar > ul > li > a > #mainMenu {
+    background-image: url(./images//Icon_home.svg);
+}
+
+#sidebar > ul > li.active > a > #mainMenu,
+#sidebar > ul > li > a:hover > #mainMenu {
+    background-image: url(./images//Icon_home_active.svg);
+}
+
+#sidebar > ul > li > a > #prescriptionMenu {
+    background-image: url(./images//Icon_prescription.svg);
+}
+
+#sidebar > ul > li.active > a > #prescriptionMenu,
+#sidebar > ul > li > a:hover > #prescriptionMenu {
+    background-image: url(./images//Icon_prescription_active.svg);
+}
+
+
+#sidebar > ul > li > a > #itemHistoryMenu {
+    background-image: url(./images//Icon_itemHistory.svg);
+}
+
+#sidebar > ul > li.active > a > #itemHistoryMenu,
+#sidebar > ul > li > a:hover > #itemHistoryMenu {
+    background-image: url(./images//Icon_itemHistory_active.svg);
+}
+
+#sidebar > ul > li > a > #itemUsageMenu {
+    background-image: url(./images//Icon_itemUsage.svg);
+}
+
+#sidebar > ul > li.active > a > #itemUsageMenu,
+#sidebar > ul > li > a:hover > #itemUsageMenu {
+    background-image: url(./images//Icon_itemUsage_active.svg);
+}
+
+#sidebar > ul > li > a > #itemInventoryMenu {
+    background-image: url(./images//Icon_inventory.svg);
+}
+
+#sidebar > ul > li.active > a > #itemInventoryMenu,
+#sidebar > ul > li > a:hover > #itemInventoryMenu {
+    background-image: url(./images//Icon_inventory_active.svg);
+}
+
+#sidebar > ul > li > a > #LabelPrintMenu {
+    background-image: url(./images//Icon_LabelPrint.svg);
+}
+
+#sidebar > ul > li.active > a > #LabelPrintMenu,
+#sidebar > ul > li > a:hover > #LabelPrintMenu {
+    background-image: url(./images//Icon_LabelPrint_active.svg);
+}
+
+#sidebar > ul > li > a > #VerbalPrescriptionMenu {
+    background-image: url(./images//Icon_VerbalPrescription.svg);
+}
+
+#sidebar > ul > li.active > a > #VerbalPrescriptionMenu,
+#sidebar > ul > li > a:hover > #VerbalPrescriptionMenu {
+    background-image: url(./images//Icon_VerbalPrescription_active.svg);
+}
+
+#sidebar > ul > li > a > #RecoveryHistoryMenu {
+    background-image: url(./images//Icon_RecoveryHistory.svg);
+}
+
+#sidebar > ul > li.active > a > #RecoveryHistoryMenu,
+#sidebar > ul > li > a:hover > #RecoveryHistoryMenu {
+    background-image: url(./images//Icon_RecoveryHistory_active.svg);
+}
+
+#sidebar > ul > li > a > #UserActionMenu {
+    background-image: url(./images//Icon_UserAction.svg);
+}
+
+#sidebar > ul > li.active > a > #UserActionMenu,
+#sidebar > ul > li > a:hover > #UserActionMenu {
+    background-image: url(./images//Icon_UserAction_active.svg);
+}
+
+#sidebar > ul > li > a > #TemperatureHumidityMenu {
+    background-image: url(./images//Icon_Temperature.svg);
+}
+
+#sidebar > ul > li.active > a > #TemperatureHumidityMenu,
+#sidebar > ul > li > a:hover > #TemperatureHumidityMenu {
+    background-image: url(./images//Icon_Temperature_active.svg);
+}
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    background: #DCE6EE;
+}
+
+#content.minimize {
+    width: calc(100% - 62px);
+}
+
+#content > .container-fluid > div:nth-child(1) {
+    background-color:red; 
+    margin:0px 10px; 
+    height:96px;
+}
+
+#container-desktop > .periodSearch {
+    margin: 0px 5px; 
+    width: 90px; 
+    height: 35px;
+}
+#container-desktop > .search {
+    width:100px; 
+    font-size:20px; 
+    font-weight:bold; 
+     margin-left: 30px;
+}
+
+#container-desktop > .startDateBox,
+#container-desktop > .endDateBox {
+    width: 170px;
+    height: 35px;
+    margin: 0px 20px;
+}
+
+#container-desktop > .searchTextBox{
+    margin: 0px 5px;
+    width: 150px; 
+}
+
+#container-desktop > .searchString{
+    margin: 0px 5px;
+    width: 150px; 
+    height: 35px;
+
+}
+
+#container-mobile > .row {
+    margin: 10px 0px;
+}
+
+#container-mobile > .row > .search {
+    font-size:20px; 
+    width:100px; 
+    font-weight: bold;
+}
+
+#container-mobile > .row > .startDateBox,
+#container-mobile > .row > .endDateBox {
+    width: 100%;
+}
+
+#container-mobile > .row > .periodSearch {
+    width: 30%; 
+    height: 35px;
+}
+
+#container-mobile > .row > .periodSearch-three {
+    margin-right:5px; 
+} 
+#container-mobile > .row > .periodSearch-six {
+    margin: 0px 5px; 
+} 
+#container-mobile > .row > .periodSearch-year {
+    margin-left:5px; 
+} 
+#container-mobile > .row > .searchTextBox {
+    margin: 0px 5px; 
+    width:100% 
+} 
+
+#container-mobile > .row > .searchString {
+    margin: 0px 5px; 
+    width: 100%; 
+    height: 35px;
+} 
+/* 미디어 쿼리: 화면 크기에 따라 스타일 변경 */
+@media (min-width: 768px) {
+    /* 데스크탑 버전 화면 크기 이상일 때 */
+    #container-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        height: 60px;
+    }
+
+    #container-mobile {
+        display: none; /* 모바일 버전 숨기기 */
+    }
+}
+
+@media (max-width: 767px) {
+    /* 모바일 버전 화면 크기 이하일 때 */
+    #container-desktop {
+        display: none; /* 데스크탑 버전 숨기기 */
+    }
+
+    #container-mobile {
+        display: block; /* 모바일 버전 보이기 */
+    }
+}

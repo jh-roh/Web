@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>01_캐로셀의 활용</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .item img {
+            width: 100%;
+        }
+
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none;
+        }
+
+        /* #carousel-example-generic {
+            width: 50%;
+        } */
+    </style>
+  </head>
+  <body>
+    <!-- 
+        1. 회전목마처럼 이미지나 텍스트 요소들을 순환시키는 콤포넌트와 플러그인을 캐러셀
+        2. .item 안의 .carousel-caption 안에 텍스트를 넣으면 손쉽게 슬라이드에 캡션을 추가할 수 있다.
+        3. 캐로셀이 슬라이드되는 간격 시간을 2초로 조절하기 위해 옵션을 활용하려면 .carousel을 가지고 div에 data-interval="2000"
+        4. 버튼을 클릭하여 이미지를 다음 항목으로 이동하려면 메소드를 활용하여 $(".carousel").carousel("next"); 로 설정
+
+     -->
+    <div class="row">
+        <div id="carousel-example-generic" class="carousel slide col-xs-4 col-xs-offset-4" data-ride="carousel" data-interval="3000" >
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+        
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../img/circus.png" alt="메인 이미지">
+                    <div class="carousel-caption">
+                    메인 이미지 Lorem ipsum dolor sit.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/cabin.png" alt="오두막집">
+                    <div class="carousel-caption">
+                    오두막집 Lorem ipsum dolor sit.
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/submarine.png" alt="잠수함">
+                    <div class="carousel-caption">
+                    잠수함 Lorem ipsum dolor sit.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    
+    <br><br><br><br><br>
+
+    <div class="row">
+        <div class="col-xs-10 col-md-offset-1 ">
+            <button class="btn btn1 btn-warning">재생</button>
+            <button class="btn btn2 btn-warning">일시정지</button>
+            <button class="btn btn3 btn-warning">이전</button>
+            <button class="btn btn4 btn-warning">다음</button>
+            <button class="btn btn5 btn-warning">첫번쨰 이미지로 바로가기</button>
+            <button class="btn btn6 btn-warning">두번째 이미지로 바로가기</button>
+            <button class="btn btn7 btn-warning">세번째 이미지로 바로가기</button>
+        </div>
+        
+    </div>
+        
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+   <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ 
+  <script>
+    $(function() {
+        // $('.carousel').carousel({
+        //     interval: 2000,
+        //     //wrap: false
+        // });
+        //각각의 버튼을 제어하는 구문
+
+        $('.btn1').click(function() {
+            $('.carousel').carousel('cycle');
+        });
+
+        $('.btn2').click(function() {
+            $('.carousel').carousel('pause');
+        });
+        
+
+        $('.btn3').click(function() {
+            $('.carousel').carousel('prev');
+        });
+
+        
+        $('.btn4').click(function() {
+            $('.carousel').carousel('next');
+        });
+
+        
+        $('.btn5').click(function() {
+            $('.carousel').carousel(0);
+        });
+        
+        $('.btn6').click(function() {
+            $('.carousel').carousel(1);
+        });
+
+        
+        $('.btn7').click(function() {
+            $('.carousel').carousel(2);
+        });
+
+        //캐러셀의 기능을 후킹하여 이벤트가 발생하면 원하는 구문이 동작하도록 구현
+        $('#carousel-example-generic').on('slide.bs.carousel', function () {
+            // do something…
+            //alert("관심있는 이벤트는 이미지를 클릭하여 참여해 보세요");
+        });
+
+
+        $('#carousel-example-generic').on('slid.bs.carousel', function () {
+            // do something…
+            //alert("관심있는 이벤트는 이미지를 클릭하여 참여해 보세요");
+        });
+    });
+   
+  </script>
+
+</body>
+</html>
