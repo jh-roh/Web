@@ -19,7 +19,8 @@
                 //폼 요소가 있는 만큼 반복하자
                 $(':input').each(function(index) {
                     result += "태그명" + $(this).get(0).tagName // this.tagName
-                        + ", type 속성명" + $(this).attr('type') + '\n';
+                        + ", type 속성명" + $(this).attr('type')
+                        + ", Id 속성명" + $(this).attr('id') + '\n';
 
                 });
                 alert(result);
@@ -31,8 +32,8 @@
     </script>
 </head>
 <body>
-    <input type="button" value="Input Button" /> <br/>
-    <input type="text"  /> <br/>
+    <input id="button1" type="button" value="Input Button" /> <br/>
+    <input id="text1" type="text"  /> <br/>
     <input type="password"  /> <br/>
     <input type="checkbox"  /> <br/>
     <input type="file"  /> <br/>
