@@ -1,0 +1,22 @@
+바벨 사용해 보기
+ => 자바스크립트 코드를 변환해주는 컴파일러
+ => 최신 자바스크립트 문법을 지원하지 않는 환경에서도 최신 문법 사용 가능
+ => 그외에도 다양한 용도로 사용
+    - 코드에서 주석을 제거하거나 코드를 압축
+ => 리액트에서는 JSX 문법을 사용하기위해 바벨을 사용
+
+
+npm init -y 명령어 실행 하면 package.js 파일 생성됨.
+
+명령어1: npm install @babel/core @babel/cli @babel/preset-react
+ => @babel/core는 바벨의 핵심적인 기능을 가지고 있는 패키지
+ => @bable/cli는 cli에서 사용할 바이너리가 들어 있음.
+ => @babel/preset-react는 리액트를 위한 플러그인 여러개를 모아놓음
+ => 바벨에는 프리셋과 플러그인이란 개념이 존재
+    - 플러그인은 하나의 변환하는 기능을 의미
+    - 그런 여러개의 플러그인을 모아놓은 것을 프리셋
+
+
+
+명령어2: npx babel --watch src --out-dir . --presets @babel/preset-react  
+
