@@ -1,5 +1,6 @@
+
 import React from 'react';
 
-export default function Button(props) {
-    return React.createElement('button', null, props.label);
-}
+export default function Button() {
+    return React.createElement('button', null, '버튼');
+};
