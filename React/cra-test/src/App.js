@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import data from './data.json'
+// import data from './data.json'
 
 function App() {
   // console.log({data});
 
   function onClick() {
-     console.log({data});
-    
+     //동적으로 데이터를 받아올 있도록 
+     import('./data.json').then(({default:data}) =>{
+        console.log({data});
+     }); 
   }
 
   return (
