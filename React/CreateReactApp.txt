@@ -23,19 +23,68 @@ npm uninstall -g create-react-app (리액트 앱 제거)
 npm install -g create-react-app (리액트 앱 재설치)
 npx create-react-app [app-name] (리액트 앱 실행)
 
+
+
+react-scripts 패키지 설치 확인
+react-scripts가 package.json의 dependencies에 포함되어 있는지 확인
+npm install react-scripts --save
+
+
+node_modules 폴더 삭제 및 재설치
+rm -rf node_modules package-lock.json
+npm install
+
+캐시 문제 해결
+npm cache clean --force
+npm install
+
+nvm list available
+nvm ls
 nvm install v버전
 nvm install v18.20.5 # LTS버전
 nvm use 18.20.5
 
+현재 버전
+v19.5.0
+
 next.js 는 바벨, 웹팩, eslint 설정을 변경할수도 있음.
 
-프로그램 실행 
-npm start
- => HMR 사용 가능(코드를 수정하면 바로 바로 화면에 적용됨)
 
 import logo from './logo.svg';
  이미지 경로에 해시값이 들어가기떄문에 브라우저 캐싱에 효율적
 
  
-//StrictMode는 개발환경에서 사용하는데, 리액트에서 잘못 하용하는것을
+//StrictMode는 개발환경에서 사용하는데, 리액트에서 잘못 활용하는것을
 //잡아내기 위해서 사용함.
+
+프로그램 실행 
+npm start
+ => HMR 사용 가능(코드를 수정하면 바로 바로 화면에 적용됨)
+
+HTTPS 로 실행하려면 윈도우
+set HTTPS=true && npm start
+HTTPS=true npm start
+
+빌드 명령어
+build 명령어는 배포할때 사용 
+빌드를 하게되면 정적파일이 생김
+npm run build
+
+로컬에서 정적파일을 서비스 하기 위해서 serve 패키지를 사용
+build 폴더를 대상으로 정적파일을 서비스
+npx serve -s build
+
+테스트 명령
+npm test
+
+eject명령어는 react-scripts를 사용하지 않고 모든 설정파일을 추출하는 명령어
+CRA를 기반으로 직접 개발환경을 구축하고 싶을때 사용
+추출을 하지 않으면 CRA의 기능이 추가 되었을때 단순히 react-scrips 버전만 올리면 됨
+관리측면에서는 추출하지 않는게 좋음
+
+Can I Use에서 JavaScript 함수등 오래된 브라우저에서 사용하는지 알 수 있음.
+
+
+
+
+
