@@ -1,0 +1,41 @@
+create-react-app으로 시작하기
+
+- 리액트 개발환경을 직접 구축하려면 많은 지식과 노력이 필요
+ => webpack, babel, jst, eslint, polyfill, HMR, CSS 후처리
+
+- 페이스북에서 관리하는 공식 툴
+
+npx create-react-app cra-test
+
+
+최신 LTS 버전의 Node.js와 NPM을 사용하는 것이 가장 안정적
+npm install -g npm@latest
+
+경고 무시
+node --no-warnings
+
+npx 사용시 캐시 정리
+npx clear-npx-cache
+
+npx create-react-app@latest my-app
+
+npm uninstall -g create-react-app (리액트 앱 제거)
+npm install -g create-react-app (리액트 앱 재설치)
+npx create-react-app [app-name] (리액트 앱 실행)
+
+nvm install v버전
+nvm install v18.20.5 # LTS버전
+nvm use 18.20.5
+
+next.js 는 바벨, 웹팩, eslint 설정을 변경할수도 있음.
+
+프로그램 실행 
+npm start
+ => HMR 사용 가능(코드를 수정하면 바로 바로 화면에 적용됨)
+
+import logo from './logo.svg';
+ 이미지 경로에 해시값이 들어가기떄문에 브라우저 캐싱에 효율적
+
+ 
+//StrictMode는 개발환경에서 사용하는데, 리액트에서 잘못 하용하는것을
+//잡아내기 위해서 사용함.
