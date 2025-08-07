@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Test</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .center-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .left-text {
+            font-size: large;
+            font-weight: bold;
+            color: black;
+        }
+
+        .login-btn {
+            margin-left: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .popup-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-text">안녕 커서</div>
+    <div class="left-text">
+        안녕하세요
+    </div>
+
+    
+    <!--로그인 로그아웃 레이아웃 작성해줘-->
+    <div class="login-logout-container">
+        <form id="login-form" class="login-form">
+            <input type="text" placeholder="ID" name="username" class="login-input">
+            <input type="password" placeholder="PASSWORD" name="password" class="login-input">
+            <button type="submit" class="login-btn">로그인</button>
+        </form>
+        <button id="logout-btn" class="logout-btn">로그아웃</button>
+    </div>
+    <style>
+        .login-logout-container {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .login-form {
+            display: flex;
+            gap: 5px;
+        }
+        .login-input {
+            padding: 4px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .login-btn {
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: none;
+            background: #1976d2;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .logout-btn {
+            display: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: none;
+            background: #d32f2f;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+    <div class="popup-backdrop" id="popupBackdrop"></div>
+    <div class="popup" id="loginPopup">
+        로그인이 완료되었습니다.
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // 간단한 로그인 시뮬레이션
+            loginForm.style.display = 'none';
+            logoutBtn.style.display = 'inline-block';
+            showLoginPopup();
+        });
+
+        logoutBtn.addEventListener('click', function() {
+            loginForm.style.display = 'flex';
+            logoutBtn.style.display = 'none';
+            loginForm.reset();
+        });
+
+        function showLoginPopup() {
+            document.getElementById('popupBackdrop').style.display = 'block';
+            document.getElementById('loginPopup').style.display = 'block';
+            
+            // 2초 후 팝업 닫기
+            setTimeout(() => {
+                document.getElementById('popupBackdrop').style.display = 'none';
+                document.getElementById('loginPopup').style.display = 'none';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
+
+<div>
+    <div style="width: 100px; height: 100px; background-color: red;">
+        <div style="width: 50px; height: 50px; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; background-color: green;"></div>
+        <div style="width: 50px; height: 50px; background-color: yellow;"></div>
+    </div>
+</div>
+<!-- 자동완성 기능이 왜 안되지 -->
+ 
+
+<div>
+    
+</div>
+ <div>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+ </div>
+
+ 
